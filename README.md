@@ -61,3 +61,19 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Injetando dependências.
 
 - Projeto base: primeiro-projeto.
+
+<h4>Aula 08</h4>
+
+- Conhecendo plugins úteis para a produtividade.
+
+<h4>Aula 09</h4>
+
+- Introdução aos tipos de binding.
+
+- Interpolação: {{ value }}.
+
+- Property bind: [property]="value".
+
+- Property bind +1: bind-property="value".
+
+- Tags sem propriedades: Ex.[attr.colspan].
