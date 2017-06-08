@@ -77,3 +77,21 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Property bind +1: bind-property="value".
 
 - Tags sem propriedades: Ex.[attr.colspan].
+
+- Projeto base: data-binding.
+
+<h4>Aula 10</h4>
+
+- Declarando variáveis locais de template: #variableName.
+
+- Class binding.
+
+- [class.class-name]="x == y".
+
+- class="{{ class-name }}".
+
+- Style binding.
+
+- [style.property]="x == y ? 'value1' : 'value2'".
+
+- Instalação do bootstrap com angular-cli.
