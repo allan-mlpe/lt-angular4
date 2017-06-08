@@ -1,5 +1,10 @@
 <p>
-  CursosComponent
+  {{ nomePortal }}
 </p>
+
+<ul>
+  <li *ngFor="let tema of temas">{{ tema }}</li>
+</ul>
+
 
 <app-curso-detalhe></app-curso-detalhe>
