@@ -2,9 +2,11 @@
 Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 <h4>Aula 01</h4>
+
 - Introdução ao Angular 2.x/4.x.
 
 <h4>Aula 02</h4>
+
 - Instalação do ambiente de desenvolvimento.
 
 - Node.js.
@@ -14,6 +16,7 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - angular-cli.
 
 <h4>Aula 03</h4>
+
 - Criando o primeiro app com o angular-cli.
 
 - ng new.
@@ -30,6 +33,7 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Projeto base: hello-typescript.
 
 <h4>Aula 05</h4>
+
 - Criando o primeiro módulo.
 
 - ng generate module (ng g m).
