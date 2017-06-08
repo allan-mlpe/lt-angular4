@@ -51,3 +51,13 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Utilizando o ngFor.
 
 - Projeto base: primeiro-projeto.
+
+<h4>Aula 07</h4>
+
+- Criando o primeiro serviço.
+
+- ng generate service (ng g s).
+
+- Injetando dependências.
+
+- Projeto base: primeiro-projeto.
