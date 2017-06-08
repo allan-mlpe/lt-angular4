@@ -1,0 +1,17 @@
+<section>
+  <article>
+    <h3>Interpolation / Interpolação</h3>
+
+    <p>String renderizada com interpolação: {{ url }} </p>
+    <p>Resultado de 1 + 1 = {{ 1 + 1 }}</p>
+    <p>Agora, usando um método: {{ 1 + 1 + getValor() }}</p>
+    <p>Analisando expressções booleanas: {{ cursoAngular && getCurtirCurso() }}
+  </article>
+
+  <article>
+    <img src="{{ urlImagem }}" /> <!-- utilizando interpolação -->
+    <img [src]="urlImagem" /> <!-- utilizando o property bind -->
+    <img bind-src="urlImagem" /> <!-- utilizando o property bind +1 -->
+  </article>
+
+</section>
