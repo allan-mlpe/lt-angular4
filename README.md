@@ -43,3 +43,11 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Expondo componentes de módulos com o export.
 
 - Projeto base: primeiro-projeto.
+
+<h4>Aula 06</h4>
+
+- Conhecendo diretivas.
+
+- Utilizando o ngFor.
+
+- Projeto base: primeiro-projeto.
