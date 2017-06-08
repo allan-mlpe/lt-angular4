@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
+
 import { CursosComponent } from './cursos/cursos.component';
 import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
+import { CursosService } from './cursos.service';
 
 @NgModule({
   imports: [
@@ -14,6 +16,9 @@ import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
   ],
   exports: [ //usamos o exports para expor componentes, serviços, etc. para fora do nosso módulo
     CursosComponent
+  ],
+  providers: [
+    CursosService
   ]
 })
 export class CursosModule { }
