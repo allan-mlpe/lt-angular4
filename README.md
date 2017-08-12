@@ -28,6 +28,7 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Projeto base: primeiro-projeto.
 
 <h4>Aula 04</h4>
+
 - Peculiaridades do TypeScript.
 
 - Projeto base: hello-typescript.
@@ -95,3 +96,17 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - [style.property]="x == y ? 'value1' : 'value2'".
 
 - Instalação do bootstrap com angular-cli.
+
+<h4>Aula 11</h4>
+
+- Aprendendo sobre event binding.
+
+- (click), (blur), (keyup), (keyup.enter), (mouseout) e (mouseover).
+
+- Passando eventos para funções: $event.
+
+- Tipando eventos: KeyboardEvent.
+
+- Utilizando a interface HTMLInputElement.
+
+- Forma alternativa de declarar eventos: on-click, on-keyup, etc.
