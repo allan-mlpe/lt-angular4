@@ -110,3 +110,12 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Utilizando a interface HTMLInputElement.
 
 - Forma alternativa de declarar eventos: on-click, on-keyup, etc.
+
+<h4>Aula 12</h4>
+
+- O two-way data-binding do Angular 2/4.
+
+- [(ngModel)] e bindon.
+
+- Habilitando o ngModel em formulários com o módulo FormsModule.
+
