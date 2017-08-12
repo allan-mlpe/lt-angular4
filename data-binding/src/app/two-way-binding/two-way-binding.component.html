@@ -1,0 +1,41 @@
+<section>
+  <article>
+    <h3>Two-way data binding</h3>
+    <div>
+      <!-- sintaxe com ngModel e two-way data binding -->
+      <input type="text" [(ngModel)]="nome" />
+
+      <!-- sintaxe utilizando data binding + event binding -->
+      <input type="text" 
+      [value]="nome"
+      (input)="nome = $event.target.value" />
+      
+      <!-- sintaxe utilizando data binding + event binding com diretivas do Angular -->
+      <input type="text" 
+      [ngModel]="nome"
+      (ngModelChange)="nome = $event" />
+
+      <p>Você digitou: {{ nome }}</p>
+
+    </div>
+  </article>
+</section>
+
+<hr>
+<section>
+  <article>
+    <h3>Two-way data binding + objetos</h3>
+    <input type="text" [(ngModel)]="pessoa.nome" />
+    <input type="text" [(ngModel)]="pessoa.idade" />
+    <input type="text" [(ngModel)]="pessoa.curso.tipo" />
+    <input type="text" [(ngModel)]="pessoa.curso.nome" />
+    
+    <p>
+      Olá, meu nome é {{ pessoa.nome }}!
+    </p>
+  
+    <p>
+      Eu tenho {{ pessoa.idade }} anos de idade e faço curso de {{ pessoa.curso.tipo }} em {{ pessoa.curso.nome }}.
+    </p>
+  </article>
+</section>
