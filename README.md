@@ -115,7 +115,7 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - O two-way data-binding do Angular 2/4.
 
-- [(ngModel)] e bindon.
+- [(ngModel)] e bindon-ngModel.
 
 - Habilitando o ngModel em formulários com o módulo FormsModule.
 
