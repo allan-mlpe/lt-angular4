@@ -1,0 +1,35 @@
+<section>
+  <article>
+    <h3>Event binding</h3>
+    <div>
+      <button class="btn btn-primary" 
+        (click)="botaoClicado()">Click me!</button> <!-- para bind de eventos utilizamos parêntises -->
+      
+      <br><br>
+
+      
+      <input type="text" #campoTexto
+        (blur)="salvarValor(campoTexto.value)"
+        on-keyup="onKeyUp($event)"  
+        (keyup.enter)="salvarValor($event.target.value)"/> <!-- utilizamos o cifrão para indicar a passagem 
+                                                                do evento para a função.
+                                                                
+                                                                obs: $event.target é equivalente a usar apenas 'campoTexto'.
+                                                           -->
+      
+      <p>
+        {{ valorAtual }}
+      </p>
+      <p>
+        {{ valorSalvo }}
+      </p>
+
+      <h4
+        (mouseover)="onMouseOverOut()"
+        (mouseout)="onMouseOverOut()"
+        [class.highlight]="isMouseOver">
+        Pass mouse over me!
+      </h4>
+    </div>
+  </article>
+</section>
