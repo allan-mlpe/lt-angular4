@@ -119,3 +119,24 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - Habilitando o ngModel em formulários com o módulo FormsModule.
 
+<h4>Aula 13</h4>
+
+- Passando valores de um componente para o outro.
+
+- @Input do pacote @angular/core.
+
+- Expondo propriedades com nomes de variáveis diferentes: @Input('valorExterno) valorInterno: any.
+
+- Declarando inputs nos metadados do componente.
+
+<h4>Aula 14</h4>
+
+- Emitindo eventos de um componente filho para um componente pai.
+
+- @Output do pacote @angular/core.
+
+- Criando eventos com a classe EventEmitter.
+
+- Emitindo objetos com eventos customizados: evento.emit({propriedadeObjeto: valor}).
+
+- Declarando outputs nos metadados do componente.
