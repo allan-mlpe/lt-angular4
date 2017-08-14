@@ -11,6 +11,12 @@ export class DataBindingComponent implements OnInit {
   cursoAngular: boolean = true;
   urlImagem: string = "http://lorempixel.com/400/200/nature/";
 
+
+  /**
+   * valor que será passado para o componente input-properties
+   * */
+  nomeDoCurso: string = "Angular";
+
   constructor() { }
 
   ngOnInit() {
