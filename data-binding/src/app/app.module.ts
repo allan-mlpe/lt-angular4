@@ -8,6 +8,7 @@ import { StyleBindComponent } from './style-bind/style-bind.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { InputPropertiesComponent } from './input-properties/input-properties.component';
+import { OutputPropertiesComponent } from './output-properties/output-properties.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { InputPropertiesComponent } from './input-properties/input-properties.co
     StyleBindComponent,
     EventBindingComponent,
     TwoWayBindingComponent,
-    InputPropertiesComponent
+    InputPropertiesComponent,
+    OutputPropertiesComponent
   ],
   imports: [
     BrowserModule,

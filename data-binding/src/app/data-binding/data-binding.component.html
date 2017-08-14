@@ -18,12 +18,21 @@
 
 <hr>
 <section>
-  <h3>Reusando componentes + Teste de InputProperties</h3>
+  <h3>Reusando componentes + Teste de InputProperties + Teste de OutputProperties</h3>
 
+  <!--================= INPUT PROPERTIES =================-->
   <!-- declarando o componente 'input-properties' que teve seletor modificado para 'app-curso' -->
   <!-- 
     Passando o valor de nomeDoCurso para o componente app-curso por meio da propriedade 'nome'.
     A propriedade 'nome' está declarada no componente app-curso
   -->
   <app-curso [nome]="nomeDoCurso"></app-curso>
+
+
+  <!--================= OUTPUT PROPERTIES =================-->
+  <contador [valor]="10"
+    (mudouValor)="onMudouValor($event)"> <!-- event binding do evendo mudouValor. 
+                                        Quando emitido, executará a função onMudouValor 
+                                        do componente pai, no caso o data-binding-component  -->
+  </contador>
 </section>
