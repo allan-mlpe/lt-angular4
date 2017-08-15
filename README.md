@@ -129,6 +129,8 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - Declarando inputs nos metadados do componente.
 
+- Referências desta aula também se encontram no componente 'data-binding'.
+
 <h4>Aula 14</h4>
 
 - Emitindo eventos de um componente filho para um componente pai.
@@ -140,6 +142,8 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Emitindo objetos com eventos customizados: evento.emit({propriedadeObjeto: valor}).
 
 - Declarando outputs nos metadados do componente.
+
+- Referências desta aula também se encontram no componente 'data-binding'.
 
 <h4>Aula 15</h4>
 
@@ -160,3 +164,13 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - AfterViewChecked.
 
 - OnDestroy.
+
+<h4>Aula 16</h4>
+
+- Manipulando DOM e template com o @ViewChild do pacote @angular/core.
+
+- Utilizando HTMLElement e ElementRef.
+
+- Alterando valor de input com o nativeElement.value.
+
+- Acessando outros componentes com o @ViewChild.
