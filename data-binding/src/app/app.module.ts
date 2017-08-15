@@ -10,6 +10,7 @@ import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.compon
 import { InputPropertiesComponent } from './input-properties/input-properties.component';
 import { OutputPropertiesComponent } from './output-properties/output-properties.component';
 import { CicloComponent } from './ciclo/ciclo.component';
+import { ViewChildComponent } from './view-child/view-child.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CicloComponent } from './ciclo/ciclo.component';
     TwoWayBindingComponent,
     InputPropertiesComponent,
     OutputPropertiesComponent,
-    CicloComponent
+    CicloComponent,
+    ViewChildComponent
   ],
   imports: [
     BrowserModule,
