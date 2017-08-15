@@ -5,3 +5,8 @@
 <app-event-binding></app-event-binding>
 <br><hr><br>
 <app-two-way-binding></app-two-way-binding>
+<br><hr><br>
+<!-- quando a condição do ngIf for falsa, o evento onDestroy é disparado -->
+<app-ciclo [valorInicial]="valor" *ngIf="!deletarCiclo"></app-ciclo>
+<button (click)="mudarValor()">Mudar valor</button>
+<button (click)="destruirCiclo()">Deletar</button>

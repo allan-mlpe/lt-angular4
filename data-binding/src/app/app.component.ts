@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  deletarCiclo: boolean = false;
+
+  valor: number = 5;
+
+  destruirCiclo() {
+    this.deletarCiclo = true;
+  }
+
+  mudarValor() {
+    this.valor++;
+  }
 }
