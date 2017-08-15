@@ -140,3 +140,23 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Emitindo objetos com eventos customizados: evento.emit({propriedadeObjeto: valor}).
 
 - Declarando outputs nos metadados do componente.
+
+<h4>Aula 15</h4>
+
+- O ciclo de vida dos componentes do Angular.
+
+- OnInit.
+
+- OnChanges.
+
+- DoCheck.
+
+- AfterContentInit.
+
+- AfterContentChecked.
+
+- AfterViewInit.
+
+- AfterViewChecked.
+
+- OnDestroy.
