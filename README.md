@@ -1,6 +1,9 @@
 # lt-angular4
 Curso de Angular 2.x/4.x do site http://loiane.training/.
 
+
+<h3>Módulo de Introdução</h3>
+<hr>
 <h4>Aula 01</h4>
 
 - Introdução ao Angular 2.x/4.x.
@@ -67,6 +70,9 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - Conhecendo plugins úteis para a produtividade.
 
+
+<h3>Módulo de Data Binding CLI</h3>
+<hr>
 <h4>Aula 09</h4>
 
 - Introdução aos tipos de binding.
@@ -183,9 +189,9 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - Rodando um projeto: o ng serve.
 
+
 <h3>Módulo do Angular CLI</h3>
 <hr>
-
 <h5>Aula 18</h4>
 
 - Criando componentes: ng g component nome-do-componente.
