@@ -223,3 +223,13 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Stylus na criação do projeto: ng new nome-do-projeto --style=stylus.
 
 - Stylus em projeto existente: ng set defaults.styleExt styl.
+
+<h4>Aula 20</h4>
+
+- Inspecionando o código e analisando a aderência ao style guide do Angular: ng lint.
+
+- Escrevendo testes nos arquivos .spec.ts e o Jasmine.
+
+- Rodando os testes da aplicação: ng test. 
+
+- Protractor e testes de integração (end-to-end): ng e2e.
