@@ -71,7 +71,7 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Conhecendo plugins úteis para a produtividade.
 
 
-<h3>Módulo de Data Binding CLI</h3>
+<h3>Módulo de Data Binding</h3>
 <hr>
 <h4>Aula 09</h4>
 
