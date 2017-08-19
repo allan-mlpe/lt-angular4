@@ -181,18 +181,18 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - Acessando outros componentes com o @ViewChild.
 
+
+<h3>Módulo do Angular CLI</h3>
+<hr>
 <h4>Aula 17</h4>
 
 - Instalando o Angular CLI.
 
-- Criando um projeto: ng new nomeDoProjeto.
+- Criando um projeto: ng new nome-do-projeto.
 
 - Rodando um projeto: o ng serve.
 
-
-<h3>Módulo do Angular CLI</h3>
-<hr>
-<h5>Aula 18</h4>
+<h4>Aula 18</h4>
 
 - Criando componentes: ng g component nome-do-componente.
 
@@ -207,3 +207,19 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Criando interfaces: ng g interface nome-da-interface.
 
 - Criando enumeradores: ng g enum nome-do-enum.
+
+<h4>Aula 19</h4>
+
+- Pré-processadores de CSS.
+
+- Saas na criação do projeto: ng new nome-do-projeto --style=saas.
+
+- Saas em projeto existente: ng set defaults.styleExt scss.
+
+- Less na criação do projeto: ng new nome-do-projeto --style=less.
+
+- Less em projeto existente: ng set defaults.styleExt less.
+
+- Stylus na criação do projeto: ng new nome-do-projeto --style=stylus.
+
+- Stylus em projeto existente: ng set defaults.styleExt styl.
