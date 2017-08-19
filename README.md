@@ -179,6 +179,25 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - Instalando o Angular CLI.
 
-- Criando um projeto com o ng new nomeDoProjeto.
+- Criando um projeto: ng new nomeDoProjeto.
 
-- Rodando um projeto com o ng serve.
+- Rodando um projeto: o ng serve.
+
+<h3>Módulo do Angular CLI</h3>
+<hr>
+
+<h5>Aula 18</h4>
+
+- Criando componentes: ng g component nome-do-componente.
+
+- Criando serviços: ng g service nome-do-servico.
+
+- Criando diretivas: ng g directive nome-da-diretiva.
+
+- Criando pipes: ng g pipe nome-do-pipe.
+
+- Criando classes: ng g class nome-da-classe.
+
+- Criando interfaces: ng g interface nome-da-interface.
+
+- Criando enumeradores: ng g enum nome-do-enum.
