@@ -174,3 +174,11 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Alterando valor de input com o nativeElement.value.
 
 - Acessando outros componentes com o @ViewChild.
+
+<h4>Aula 17</h4>
+
+- Instalando o Angular CLI.
+
+- Criando um projeto com o ng new nomeDoProjeto.
+
+- Rodando um projeto com o ng serve.
