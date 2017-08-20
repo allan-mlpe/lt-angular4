@@ -233,3 +233,15 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Rodando os testes da aplicação: ng test. 
 
 - Protractor e testes de integração (end-to-end): ng e2e.
+
+<h4>Aula 21</h4>
+
+- Conhecendo a estrutura de um projeto Angular 2.x/4.x.
+
+<h4>Aula 22</h4>
+
+- Gerando builds de produção e builds de desenvolvimento.
+
+- ng build --dev: build de desenvolvimento, sem obfuscar e sem minificar o código (bom para debug).
+
+- ng build --prod: build de produção, o código é todo obfuscado e minificado.
