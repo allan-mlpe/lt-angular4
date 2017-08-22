@@ -257,3 +257,9 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Instalando o Materialize no projeto: npm install materialize-css --save | npm install angular2-materialize --save.
 
 - Angular2-Materialize: https://www.npmjs.com/package/angular2-materialize.
+
+- Instalando o lodash: npm install lodash --save.
+
+- Instalando uma ponte entre o TypeScript e o lodash: npm install @types/lodash --save.
+
+- Importando todos os utilitários do lodash: import * as _ from 'lodash'.
