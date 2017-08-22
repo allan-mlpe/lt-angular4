@@ -245,3 +245,15 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - ng build --dev: build de desenvolvimento, sem obfuscar e sem minificar o código (bom para debug).
 
 - ng build --prod: build de produção, o código é todo obfuscado e minificado.
+
+<h4>Aula 23</h4>
+
+- Instalando o Bootstrap no projeto: npm install --save bootstrap.
+
+- Salvando a instalação das libs no package.json: --save.
+
+- Inserindo os paths para os arquivos das libs externas no angular-cli.json.
+
+- Instalando o Materialize no projeto: npm install materialize-css --save | npm install angular2-materialize --save.
+
+- Angular2-Materialize: https://www.npmjs.com/package/angular2-materialize.
