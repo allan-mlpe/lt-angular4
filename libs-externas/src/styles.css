@@ -1,0 +1,5 @@
+/* 
+    o conteúdo do materialize.css será inserido dentro do arquivo styles.css na hora do build.
+    também poderíamos inserir o materialize.css na seção de estilos do angular-cli.json
+ */
+@import "../node_modules/materialize-css/dist/css/materialize.css";
