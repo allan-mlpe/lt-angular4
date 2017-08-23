@@ -1,0 +1,39 @@
+<h5>*ngIf</h5>
+
+<!-- 
+  a div só será exibida se a condição 
+  do ngIf for verdadeira.
+ -->
+<div *ngIf="cursos.length > 0">
+  Lista de cursos aqui.
+</div>
+
+<div *ngIf="cursos.length == 0">
+  Não existem cursos a serem exibidos
+</div>
+
+<!-- 
+  além de expressões, também podemos
+  passar variáveis booleanas para o ngIf
+-->
+<div *ngIf="mostrarCursos">
+  Div exibida quando variável mostrarCursos = true.
+</div>
+
+<!--
+  Como não há um 'ngElse' nós negamos
+  a expressão/variável para ter o efeito contrário
+-->
+<div *ngIf="!mostrarCursos">
+    Div exibida quando variável mostrarCursos = false.
+</div>
+
+<br>
+
+<button (click)="onMostrarCursos()">Mostrar Cursos</button>
+
+<h5>Hidden como alternativa</h5>
+
+<div [hidden]="mostrarCursos">
+  Exibido quando a condição do hidden for FALSA.
+</div>
