@@ -248,7 +248,7 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 <h4>Aula 23</h4>
 
-- Instalando o Bootstrap no projeto: npm install --save bootstrap.
+- Instalando o Bootstrap no projeto: npm install --save bootstrap@next.
 
 - Salvando a instalação das libs no package.json: --save.
 
@@ -264,6 +264,9 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - Importando todos os utilitários do lodash: import * as _ from 'lodash'.
 
+
+<h3>Módulo de Diretivas</h3>
+<hr>
 <h4>Aula 24</h4>
 
 - Introdução ao uso de diretivas.
@@ -284,3 +287,12 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - Para escolher entre *ngIf e [hidden] deve-se levar em conta o custo para renderizar os elementos na tela e também questões de segurança como o acesso ao conteúdo da aplicação por usuários que não tem o perfil apropriado, por exemplo.
 
+<h4>Aula 26</h4>
+
+- Aprendendo sobre a diretiva ngSwitch.
+
+- Escutando o valor das variáveis via property bind: [ngSwitch]="variavel".
+
+- Analisando os casos do switch: *ngSwitchCase="valorDaVariavelNesteCaso".
+
+- Criando um caso padrão para o switch: *ngSwitchDefault.
