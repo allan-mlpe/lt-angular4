@@ -1,0 +1,16 @@
+<h3>NgFor</h3>
+
+<!-- 
+  é obrigatório o uso da keyword let na declaração da variável local (curso).
+  em seguida declaramos o array a ser iterado que foi definido no arquivo TS (cursos).
+  também podemos definir uma variável local (i) que representa o índice do array (index).
+ -->
+<ul *ngFor="let curso of cursos, let i = index">
+  <li>
+
+    {{ i + 1 }} - 
+
+    <!-- utilizamos a variável local 'curso' definida no ngFor -->
+    {{ curso }}
+  </li>
+</ul>
