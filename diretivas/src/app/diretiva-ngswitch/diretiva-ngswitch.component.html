@@ -1,0 +1,39 @@
+<h3>NgSwitch</h3>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      
+      <li class="nav-item"
+        [class.active]="aba == 'home'"
+        (click)="aba = 'home'"> <!-- atribuição de valor direto no event binding -->
+          <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item"
+        [class.active]="aba == 'aba2'"
+        (click)="aba = 'aba2'">
+          <a class="nav-link">Aba2</a>
+      </li>
+
+      <li class="nav-item"
+        [class.active]="aba == 'aba3'"
+        (click)="aba = 'aba3'">
+          <a class="nav-link">Aba3</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+<!-- 
+  o ngSwitch recebe a variável que ficará "escutando" via property binding
+ -->
+<div class="container" [ngSwitch]="aba" >
+  <!-- uso do *ngSwitchCase -->
+  <p *ngSwitchCase="'aba2'">Você está na Aba2.</p>
+  <p *ngSwitchCase="'aba3'">Ops! Agora você foi para a Aba3.</p>
+
+  <!-- uso do *ngSwitchDefault -->
+  <p *ngSwitchDefault>Bem vindo ao componente do ngSwitch.</p>
+
+</div>
