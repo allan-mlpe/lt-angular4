@@ -263,3 +263,11 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Instalando uma ponte entre o TypeScript e o lodash: npm install @types/lodash --save.
 
 - Importando todos os utilitários do lodash: import * as _ from 'lodash'.
+
+<h4>Aula 24</h4>
+
+- Introdução ao uso de diretivas.
+
+- Diretivas estruturais: utilizadas para modificar a estrutura do DOM e/ou código HTML - *ngIf, *ngFor.
+
+- Diretivas de atributos: aquelas que interagem com o elemento em que foram aplicadas - ng-class, ng-style.
