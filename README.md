@@ -271,3 +271,16 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Diretivas estruturais: utilizadas para modificar a estrutura do DOM e/ou código HTML - *ngIf, *ngFor.
 
 - Diretivas de atributos: aquelas que interagem com o elemento em que foram aplicadas - ng-class, ng-style.
+
+<h4>Aula 25</h4>
+
+- Utilizando a diretiva *ngIf para exibir elementos no DOM.
+
+- Utilizando [hidden] como alternativa ao *ngIf.
+
+- *ngIf: mais indicada para exibir/ocultar grandes árvores de elementos. Cria ou destrói os elementos no DOM, o que pode ser prejudicial à performance da aplicação.
+
+- [hidden]: mais indicada para exibir/ocultar pequenos elementos. Renderiza ambos elementos na tela, deixando-os apenas como visibilidade oculta.
+
+- Para escolher entre *ngIf e [hidden] deve-se levar em conta o custo para renderizar os elementos na tela e também questões de segurança como o acesso ao conteúdo da aplicação por usuários que não tem o perfil apropriado, por exemplo.
+
