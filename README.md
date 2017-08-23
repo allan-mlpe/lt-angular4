@@ -296,3 +296,13 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Analisando os casos do switch: *ngSwitchCase="valorDaVariavelNesteCaso".
 
 - Criando um caso padrão para o switch: *ngSwitchDefault.
+
+<h4>Aula 27</h4>
+
+- Iterando sobre arrays com a diretiva *ngFor.
+
+- *ngFor="let variavelLocal of array".
+
+- Utilizando "index" para recuperar os índices do array a ser iterado.
+
+- *ngFor="let variavelLocal of array, let i = index".
