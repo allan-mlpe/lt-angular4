@@ -311,6 +311,6 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - Compreendendo o uso do asterisco nas diretivas *ngIf, *ngFor, *ngSwitchCase e *ngSwitchDefault.
 
-- A tag <template> do Angular.
+- A tag template do Angular.
 
 - O atributo template.
