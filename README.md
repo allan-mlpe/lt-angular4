@@ -307,10 +307,18 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - *ngFor="let variavelLocal of array, let i = index".
 
-<h4>Aula 24</h4>
+<h4>Aula 28</h4>
 
 - Compreendendo o uso do asterisco nas diretivas *ngIf, *ngFor, *ngSwitchCase e *ngSwitchDefault.
 
-- A tag template do Angular.
+- A tag template.
 
 - O atributo template.
+
+<h4>Aula 29</h4>
+
+- Class binding e diretiva ngClass.
+
+- [class.nomeDaClasseASerAplicada]="expressao".
+
+- [ngClass]="{'nomeDaClasseASerAplicada': expressao, ...}".
