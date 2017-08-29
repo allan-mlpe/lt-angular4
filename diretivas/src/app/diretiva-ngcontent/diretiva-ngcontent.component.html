@@ -1,0 +1,13 @@
+<h3>NgContent</h3>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      <!-- podemos definir mais de uma tag ng-content usando o atributo 'select' -->
+      <ng-content select=".titulo"></ng-content>
+    </h3>
+  </div>
+  <div class="panel-body">
+    <!-- para o select passamos a classe dos elementos definidos no app.component.html -->
+    <ng-content select=".corpo"></ng-content>
+  </div>
+</div>
