@@ -173,6 +173,8 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - OnDestroy.
 
+- Uso do conteúdo dessa aula no componente view-child.
+
 <h4>Aula 16</h4>
 
 - Manipulando DOM e template com o @ViewChild do pacote @angular/core.
@@ -342,3 +344,17 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 <h4>Aula 32</h4>
 
 - Injetando conteúdo em componentes com a tag ng-content.
+
+<h4>Aula 33</h4>
+
+- Criando diretivas customizadas: ng g d nomeDaDiretiva.
+
+- Obtendo referências de elementos do DOM com a classe ElementRef do pacote '@angular/core'.
+
+- Problemas de segurança na alteração do nativeElement via ElementRef.
+
+- Usando a classe Renderer ('@angular/core') para alterar os elementos do DOM.
+
+- Definindo que a diretiva seja aplicada apenas a elementos específicos alterando o seletor da diretiva.
+
+- selector: 'p[nomeDaDiretiva]'.
