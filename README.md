@@ -125,6 +125,8 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - Habilitando o ngModel em formulários com o módulo FormsModule.
 
+- import { FormsModule } from '@angular/forms'.
+
 <h4>Aula 13</h4>
 
 - Passando valores de um componente para o outro.
@@ -322,3 +324,21 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - [class.nomeDaClasseASerAplicada]="expressao".
 
 - [ngClass]="{'nomeDaClasseASerAplicada': expressao, ...}".
+
+<h4>Aula 30</h4>
+
+- Relembrando o style binding.
+
+- Utilizando a diretiva ngStyle para mudar os estilos dos elementos.
+
+- [ngStyle]="{'nomeDaPropriedadeASerModificada': expressao, ...}".
+
+<h4>Aula 31</h4>
+
+- Aprendendo a usar o operador Elvis: ?.
+
+- objetoQuePodeSerNulo?.propriedadeDoObjeto.
+
+<h4>Aula 32</h4>
+
+- Injetando conteúdo em componentes com a tag ng-content.
