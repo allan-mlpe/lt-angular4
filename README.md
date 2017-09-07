@@ -358,3 +358,15 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Definindo que a diretiva seja aplicada apenas a elementos específicos alterando o seletor da diretiva.
 
 - selector: 'p[nomeDaDiretiva]'.
+
+<h4>Aula 34</h4>
+
+- Escutando eventos no hospedeiro da diretiva: a classe HostListener do pacote @angular/core.
+
+- @HostListener('nomeDoEvento') metodoASerExecutado() { ... }.
+
+- Associando o valor de uma variável a um atributo/classe do hospedeiro da diretiva: a classe HostBinding do pacote @angular/core.
+
+- Ex.: @HostBinding('style.backgroundColor') nomeDaVariavel.
+
+- Ex2.: @HostBinding('style.backgroundColor') get setNomeDaVariavel() { ... }.
