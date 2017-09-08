@@ -382,3 +382,19 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Usando lifecycle hooks em uma diretiva (ngOnInit).
 
 - Diretiva: shared/highlight.
+
+<h4>Aula 36</h4>
+
+- Criando diretivas estruturais.
+
+- Usando as classes TemplateRef e ViewContainerRef do pacote @angular/core.
+
+- TemplateRef: faz referência ao template que possui a diretiva (tag template).
+
+- ViewContainerRef: faz referência ao conteúdo a ser renderizado.
+
+- Renderizando o conteúdo: this._viewContainerRef.createEmbeddedView(this._templateRef).
+
+- Apagando o conteúdo: this._viewContainerRef.clear().
+
+- Diretiva: shared/ng-else.
