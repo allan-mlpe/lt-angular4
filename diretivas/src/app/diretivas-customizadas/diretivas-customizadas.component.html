@@ -10,3 +10,26 @@
 <p [highlight]="'lightgreen'" [defaultColor]="'lightgray'">
   Texto com highligh com cores customizadas
 </p>
+
+<div>
+  <div *ngIf="mostrarCursos">
+    Lista:
+    <ul>
+      <li *ngFor="let curso of cursos">
+        {{ curso }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- 
+    o Angular abstrai a estrutura da tag <template>
+    por isso podemos usar o asterisco (*ngElse)
+  -->
+  <div *ngElse="mostrarCursos">
+    Nada para ser exibido.
+  </div>
+
+  <button (click)="onMostrarCursos()">
+    {{ mostrarCursos ? 'Ocultar Cursos' : 'Mostrar Cursos' }}
+  </button>
+</div>

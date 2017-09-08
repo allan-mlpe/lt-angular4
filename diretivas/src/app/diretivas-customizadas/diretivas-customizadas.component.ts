@@ -7,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiretivasCustomizadasComponent implements OnInit {
 
+  mostrarCursos: boolean = false;
+
+  cursos: string[] = ["Angular", "TypeScript", "JavaScript"];
+
+  onMostrarCursos() {
+    this.mostrarCursos = !this.mostrarCursos;
+  }
+
+
   constructor() { }
 
   ngOnInit() {
