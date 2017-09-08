@@ -359,6 +359,8 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - selector: 'p[nomeDaDiretiva]'.
 
+- Diretiva: shared/fundo-amarelo.directive.ts.
+
 <h4>Aula 34</h4>
 
 - Escutando eventos no hospedeiro da diretiva: a classe HostListener do pacote @angular/core.
@@ -370,3 +372,13 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Ex.: @HostBinding('style.backgroundColor') nomeDaVariavel.
 
 - Ex2.: @HostBinding('style.backgroundColor') get setNomeDaVariavel() { ... }.
+
+- Diretiva: shared/highlight-mouse.directive.ts.
+
+<h4>Aula 35</h4>
+
+- Criando diretivas com InputProperties.
+
+- Usando lifecycle hooks em uma diretiva (ngOnInit).
+
+- Diretiva: shared/highlight.
