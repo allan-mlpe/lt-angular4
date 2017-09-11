@@ -398,3 +398,12 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Apagando o conteúdo: this._viewContainerRef.clear().
 
 - Diretiva: shared/ng-else.
+
+
+<h3>Módulo de Serviços</h3>
+<hr>
+<h4>Aula 37</h4>
+
+- Introdução ao uso dos serviços.
+
+- DRY: don't repeat yourself.
