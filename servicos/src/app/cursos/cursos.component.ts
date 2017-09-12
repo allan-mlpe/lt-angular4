@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { CursosService } from './cursos.service';
+import { Cursos2Service } from './cursos2.service'; //classe injetável
 
 @Component({
   selector: 'app-cursos',
@@ -15,8 +16,12 @@ export class CursosComponent implements OnInit {
   //se usar a injeção de dependências
   cursosService: CursosService;
 
-  constructor() {
-    this.cursosService = new CursosService();
+  //injetando a dependência Cursos2Service no construtor
+  constructor(private _cursos2Service: Cursos2Service) {
+    //this.cursosService = new CursosService();
+    
+    //fornecendo uma instância do cursos2services automaticamente
+    this.cursosService = _cursos2Service;
    }
 
   
