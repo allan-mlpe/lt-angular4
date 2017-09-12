@@ -420,6 +420,6 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - Usando a injeção de dependência do Angular.
 
-- Definindo que uma classe e injetável: a anotação @Injectable.
+- Definindo que uma classe e injetável: a anotação @Injectable().
 
-- Declarando serviços nos providers para disponibilizá-los para toda aplicação.
+- Declarando serviços nos providers do app.module para disponibilizá-los para toda aplicação.
