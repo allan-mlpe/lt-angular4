@@ -407,3 +407,19 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Introdução ao uso dos serviços.
 
 - DRY: don't repeat yourself.
+
+<h4>Aula 38</h4>
+
+- Criando uma classe de serviço manualmente.
+
+- Importando a classe criada no componente.
+
+- Usando o método ngOnInit para carregar dados na inicialização do componente.
+
+<h4>Aula 39</h4>
+
+- Usando a injeção de dependência do Angular.
+
+- Definindo que uma classe e injetável: a anotação @Injectable.
+
+- Declarando serviços nos providers para disponibilizá-los para toda aplicação.
