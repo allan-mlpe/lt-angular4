@@ -125,7 +125,7 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - Habilitando o ngModel em formulários com o módulo FormsModule.
 
-- import { FormsModule } from '@angular/forms'.
+- import { FormsModule } from '@angular/forms' -> no respectivo módulo.
 
 <h4>Aula 13</h4>
 
@@ -423,3 +423,17 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Definindo que uma classe e injetável: a anotação @Injectable().
 
 - Declarando serviços nos providers do app.module para disponibilizá-los para toda aplicação.
+
+<h4>Aula 40</h4>
+
+- Compreendendo o escopo dos serviços.
+
+- Expondo serviços no metadado providers dos módulos do Angular.
+
+- No Angular, os serviços utilizam o padrão singleton, ou seja, o serviço é instanciado apenas uma vez, independente de quantos componentes e/ou módulos utilizem-o.
+
+- Criando módulos de funcionalidades: CommonModule do pacote @angular/common.
+
+- Expondo componentes para outros módulos: o metadado exports.
+
+- Criando múltiplas instâncias de um serviço: declarando providers em componentes específicos.
