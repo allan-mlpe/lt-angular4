@@ -1,0 +1,3 @@
+<input type="text" placeholder="Nome do curso" [(ngModel)]="curso">
+
+<button (click)="onAddCurso()" [disabled]="curso === '' ? true : null">Adicionar</button>
