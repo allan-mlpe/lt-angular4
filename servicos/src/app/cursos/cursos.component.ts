@@ -6,7 +6,9 @@ import { Cursos2Service } from './cursos2.service'; //classe injetável
 @Component({
   selector: 'app-cursos',
   templateUrl: './cursos.component.html',
-  styleUrls: ['./cursos.component.css']
+  styleUrls: ['./cursos.component.css'],
+  providers: [Cursos2Service] //podemos declarar serviços apenas para o componente específico
+                              //assim também podemos criar várias instâncias do mesmo serviço
 })
 export class CursosComponent implements OnInit {
 
