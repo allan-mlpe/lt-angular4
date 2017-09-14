@@ -33,6 +33,13 @@ export class CursosComponent implements OnInit {
    ngOnInit() {
      //obtendo os cursos do serviço criado manualmente
      this.cursos = this.cursosService.getCursos();
+
+    //incrição para ouvir os eventos/alterações no atributo estático do serviço
+    //isso faz com que alterações em outras instâncias do serviço sejam refletidas
+    //e estejam acessíveis para todas as instâncias do mesmo
+    Cursos2Service.emitirCursoCriadoStatic.subscribe(
+      cursoCriado => this.cursos.push(cursoCriado)
+    );
   }
 
 }

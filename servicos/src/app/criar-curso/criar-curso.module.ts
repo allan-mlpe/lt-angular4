@@ -6,10 +6,13 @@ import { FormsModule } from '@angular/forms';
 
 import { Cursos2Service } from '../cursos/cursos2.service';
 import { CriarCursoComponent } from './criar-curso.component';
+import { ReceberCursoCriadoComponent } from '../receber-curso-criado/receber-curso-criado.component';
 
 @NgModule({
   declarations: [
-    CriarCursoComponent
+    CriarCursoComponent,
+    ReceberCursoCriadoComponent //como este componente será usado apenas internamente neste módulo
+                                //não precisamos declará-lo no metadado exports
   ],
   imports: [
     CommonModule,
