@@ -437,3 +437,13 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Expondo componentes para outros módulos: o metadado exports.
 
 - Criando múltiplas instâncias de um serviço: declarando providers em componentes específicos.
+
+<h4>Aula 41</h4>
+
+- Comunicação entre componentes utilizando serviços.
+
+- Utilizando o EventEmitter para broadcast de eventos.
+
+- Escutando eventos/modificações de um EventEmitter: eventEmitterObj.subscribe(function... );
+
+- Compartilhando variáveis entre instâncias diferentes de um mesmo serviço: o uso de atributos estáticos.
