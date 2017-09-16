@@ -447,3 +447,9 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Escutando eventos/modificações de um EventEmitter: eventEmitterObj.subscribe(function... );
 
 - Compartilhando variáveis entre instâncias diferentes de um mesmo serviço: o uso de atributos estáticos.
+
+<h4>Aula 42</h4>
+
+- Criando serviços com o Angular CLI: ng g s nomeDoServico.
+
+- Injetando um serviço como dependência de outro serviço.
