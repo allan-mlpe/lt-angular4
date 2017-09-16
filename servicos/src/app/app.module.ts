@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { CursosModule } from './cursos/cursos.module';
 import { Cursos2Service } from './cursos/cursos2.service';
 import { CriarCursoModule } from './criar-curso/criar-curso.module';
+import { LogService } from './shared/log.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { CriarCursoModule } from './criar-curso/criar-curso.module';
     CursosModule
   ],
   providers: [
-    Cursos2Service //serviços são fornecedores, então declaramo-os como providers
+    LogService //serviços são fornecedores, então declaramo-os como providers
   ],
   bootstrap: [AppComponent]
 })

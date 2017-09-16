@@ -1,5 +1,7 @@
 import { Injectable, EventEmitter } from '@angular/core';
 
+import { LogService } from './../shared/log.service';
+
 //declarando que a classe é injetável
 @Injectable()
 export class Cursos2Service {
@@ -20,14 +22,17 @@ export class Cursos2Service {
 
     cursos: string[] = ['Angular', 'JavaScript', 'TypeScript'];
 
-    constructor() {
-        console.log('Init CursosService..');
+    //injeção do serviço LogService no construtor do serviço Cursos2Service
+    constructor(private logService: LogService) {
+        //console.log('Init CursosService..');
+        this.logService.consoleLog('Init Cursos2Service...');
     }
 
     /**
      * Obtém a lista de todos os cursos
      */
     getCursos() {
+        this.logService.consoleLog('Obtendo lista de cursos...');
         return this.cursos;
     }
 
@@ -36,6 +41,10 @@ export class Cursos2Service {
      * @param curso curso a ser inserido
      */
     addCurso(curso: string) {
+
+        //usando crase podemos usar template strings para evitar a concatenação de strings
+        this.logService.consoleLog(`Adicionando o curso "${curso}" à lista de cursos...`);
+
         this.cursos.push(curso);
 
         this.emitirCursoCriado.emit(curso);
