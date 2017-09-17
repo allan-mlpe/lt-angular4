@@ -1,0 +1,31 @@
+<h3>Exemplos de Pipes</h3>
+
+<!-- pipe para deixar todo conteúdo em letras maiúsculas -->
+<p>Título: {{ livro.titulo | uppercase }}</p>
+
+<!-- 
+  pipe para editar números e casas decimais 
+  passamos primeiro o número de casas desejadas à esquerda
+  após o ponto utilizamos o número mínimo e máximo de casas à direita
+-->
+<p>Avaliação: {{ livro.rating | number:'1.2-2' }}</p>
+
+<p>Número de páginas: {{ livro.numeroPaginas }}</p>
+
+<!--
+  pipe para formatar moedas
+  o primeiro parâmetro passado é para indicar o país (default é USD)
+  o segunto (true) é para indicar que seja utilizado o símbolo da moeda (R$)
+-->
+<p>Preço: {{ livro.preco | currency:'BRL':true }}</p>
+
+<!--
+  pipe para editar datas 
+  Passamos o formato desejado como parâmetro
+-->
+<p>Data de lançamento: {{ livro.dataLancamento | date:'dd/MM/yyyy' }}</p>
+
+<p>URL: {{ livro.url }}</p>
+
+<!-- pipe que formata um objeto em formato JSON -->
+<p>Livro: {{ livro | json }}</p>
