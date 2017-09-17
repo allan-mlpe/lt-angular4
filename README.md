@@ -453,3 +453,20 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Criando serviços com o Angular CLI: ng g s nomeDoServico.
 
 - Injetando um serviço como dependência de outro serviço.
+
+
+<h3>Módulo de Pipes</h3>
+<hr>
+<h4>Aula 43</h4>
+
+- Aprendendo a utilizar pipes.
+
+- Maiúsculas e minúsculas: uppercase e lowercase.
+
+- Editando números decimais: number:'1.2-2' (neste exemplo informamos primeiro o número de casas à esquerda e depois o número mínimo e máximo de casas após a vírgula).
+
+- Trabalhando com moedas: currency:'BRL':true (neste exemplo informamos que queremos o padrão de moeda do Brasil e o 'true' informa que o símbolo da moeda deve ser utilizado).
+
+- Formatando datas: date:'dd/MM/yyyy'.
+
+- Exibindo objetos em formato JSON: json.
