@@ -477,4 +477,12 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - ng g pipe nome-do-pipe (ng g p nome-do-pipe).
 
-- 
+<h4>Aula 45</h4>
+
+- Adicionando o Locale em pipes.
+
+- A constante LOCALE_ID do pacote @angular/core.
+
+- { provide: LOCALE_ID, useValue: 'pt-BR' }.
+
+- Utilizando um serviço para importar configurações de locale: { provide: LOCALE_ID, deps: [NomeDoServico], useFactory: variavel => variavel.metodo() }.
