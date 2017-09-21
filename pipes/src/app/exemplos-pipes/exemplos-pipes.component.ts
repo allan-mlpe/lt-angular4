@@ -16,9 +16,16 @@ export class ExemplosPipesComponent implements OnInit {
     url: 'https://www.amazon.com/Gerenciando-Conhecimento-Times-Desenvolvimento-%C3%81gil/dp/6202403225'
   };
 
+  listaCursos: string[] = ['Angular', 'Java'];
+
+  filtro: string = '';
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  addNovoCurso(curso) {
+    this.listaCursos.push(curso);
+  }
 }

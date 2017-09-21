@@ -1,9 +1,11 @@
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ExemplosPipesComponent } from './exemplos-pipes/exemplos-pipes.component';
 import { CamelCasePipe } from './camel-case.pipe';
+import { FiltroArrayPipe } from './filtro-array.pipe';
 import { SettingsService } from './settings.service';
 
 
@@ -11,10 +13,12 @@ import { SettingsService } from './settings.service';
   declarations: [
     AppComponent,
     ExemplosPipesComponent,
+    FiltroArrayPipe,
     CamelCasePipe //assim como os módulos, os pipes devem vir no metadado declarations
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [
     /*{
@@ -25,7 +29,7 @@ import { SettingsService } from './settings.service';
     {
       provide: LOCALE_ID,
       deps: [SettingsService],
-      useFactory: settingsService => settingsService.getLocale()
+      useFactory: (settingsService) => settingsService.getLocale()
     }
   ],
   bootstrap: [AppComponent]

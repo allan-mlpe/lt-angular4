@@ -31,3 +31,21 @@
 <p>Livro: {{ livro | json }}</p>
 
 <p> {{ 'Utilizando um PIPE customizado' | camelCase }} </p>
+
+<hr>
+
+<!-- filtros puros do angular -->
+Filtro: <input type="text" [(ngModel)]='filtro'> <br>
+
+<!-- 
+  ao adicionar um novo curso, o filtro não irá considerar o novo
+  valor adicionando ao array, pq filtros puros não monitoram as
+  atualizações dos objetos ao qual são aplicados
+-->
+Novo Curso: <input type="text" #novoCurso /> <button (click)="addNovoCurso(novoCurso.value)">Adicionar</button>
+
+<ul>
+  <li *ngFor='let curso of listaCursos | filtroArray:filtro'>
+    {{ curso }}
+  </li>
+</ul>
