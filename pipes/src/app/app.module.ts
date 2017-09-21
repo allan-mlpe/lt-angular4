@@ -25,7 +25,7 @@ import { SettingsService } from './settings.service';
     {
       provide: LOCALE_ID,
       deps: [SettingsService],
-      useFactory: (settingsService) => settingsService.getLocale()
+      useFactory: settingsService => settingsService.getLocale()
     }
   ],
   bootstrap: [AppComponent]
