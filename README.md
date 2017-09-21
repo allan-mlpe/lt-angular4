@@ -470,3 +470,11 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Formatando datas: date:'dd/MM/yyyy'.
 
 - Exibindo objetos em formato JSON: json.
+
+<h4>Aula 44</h4>
+
+- Criando um pipe customizado.
+
+- ng g pipe nome-do-pipe (ng g p nome-do-pipe).
+
+- 
