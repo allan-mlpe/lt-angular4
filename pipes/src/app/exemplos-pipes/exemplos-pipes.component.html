@@ -1,6 +1,6 @@
 <h3>Exemplos de Pipes</h3>
 
-<!-- pipe para deixar todo conteúdo em letras maiúsculas -->
+<!-- pipe para deixar todo conteúdo em letras maiúsculas (uppercase) -->
 <p>Título: {{ livro.titulo | uppercase }}</p>
 
 <!-- 
@@ -29,3 +29,5 @@
 
 <!-- pipe que formata um objeto em formato JSON -->
 <p>Livro: {{ livro | json }}</p>
+
+<p> {{ 'Utilizando um PIPE customizado' | camelCase }} </p>
