@@ -486,3 +486,19 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - { provide: LOCALE_ID, useValue: 'pt-BR' }.
 
 - Utilizando um serviço para importar configurações de locale: { provide: LOCALE_ID, deps: [NomeDoServico], useFactory: variavel => variavel.metodo() }.
+
+<h4>Aula 46</h4>
+
+- Pipes puros: pipes que não monitoram modificações no objeto ao qual são aplicados.
+
+- Passando argumentos para um filtro puro: nomeDoFiltro:nomeDoParametro.
+
+<h4>Aula 47</h4>
+
+- Pipes impuros: monitorando as alterações nos objetos.
+
+- O metadado 'pure' da anotação @Pipe.
+
+- pure: false -> para pipes impuros.
+
+- Construindo um filtro de arrays utilizando boas práticas (sem filtros, por questões de desempenho).
