@@ -67,3 +67,7 @@ Novo Curso: <input type="text" #novoCurso /> <button (click)="addNovoCurso(novoC
     {{ curso }}
   </li>
 </ul>
+
+<!-- utilização do pipe async -->
+<p>{{ valorAsync | async }}</p> <!-- valorAsync estará disponível após 2s -->
+<p>{{ valorAsync2 | async }}</p> <!-- valorAsync2 estará disponível após 3s -->
