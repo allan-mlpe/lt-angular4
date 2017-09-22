@@ -506,3 +506,9 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 <h4>Aula 48</h4>
 
 - Aplicando pipes em dados que demoram a estar disponíveis: o pipe async.
+
+<h3>Módulo de Rotas</h3>
+<hr>
+<h4>Aula 48</h4>
+
+- Introduzindo o conceito de Single Page Applications (SPA) e roteamento no Angular.
