@@ -7,6 +7,7 @@ import { ExemplosPipesComponent } from './exemplos-pipes/exemplos-pipes.componen
 import { CamelCasePipe } from './camel-case.pipe';
 import { FiltroArrayPipe } from './filtro-array.pipe';
 import { SettingsService } from './settings.service';
+import { FiltroArrayImpuroPipe } from './filtro-array-impuro.pipe';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { SettingsService } from './settings.service';
     AppComponent,
     ExemplosPipesComponent,
     FiltroArrayPipe,
-    CamelCasePipe //assim como os módulos, os pipes devem vir no metadado declarations
+    CamelCasePipe,
+    FiltroArrayImpuroPipe //assim como os módulos, os pipes devem vir no metadado declarations
   ],
   imports: [
     BrowserModule,

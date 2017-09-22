@@ -28,4 +28,15 @@ export class ExemplosPipesComponent implements OnInit {
   addNovoCurso(curso) {
     this.listaCursos.push(curso);
   }
+
+  obterCursos(): string[] {
+
+    if(this.listaCursos.length === 0 || this.filtro === undefined || this.filtro.trim() === '') {
+      return this.listaCursos;
+    }
+
+    return this.listaCursos.filter(
+      c => c.toLowerCase().indexOf(this.filtro.toLowerCase()) !== -1
+    );
+  }
 }

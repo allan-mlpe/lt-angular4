@@ -35,7 +35,7 @@
 <hr>
 
 <!-- filtros puros do angular -->
-Filtro: <input type="text" [(ngModel)]='filtro'> <br>
+Filtro: <input type="text" [(ngModel)]='filtro'>
 
 <!-- 
   ao adicionar um novo curso, o filtro não irá considerar o novo
@@ -44,8 +44,26 @@ Filtro: <input type="text" [(ngModel)]='filtro'> <br>
 -->
 Novo Curso: <input type="text" #novoCurso /> <button (click)="addNovoCurso(novoCurso.value)">Adicionar</button>
 
+<h4>Pipe Puro</h4>
+
 <ul>
   <li *ngFor='let curso of listaCursos | filtroArray:filtro'>
+    {{ curso }}
+  </li>
+</ul>
+
+<h4>Pipe Impuro</h4>
+
+<ul>
+  <li *ngFor='let curso of listaCursos | filtroArrayImpuro:filtro'>
+    {{ curso }}
+  </li>
+</ul>
+
+<h4>Maneira correta de filtrar arrays em projetos</h4>
+
+<ul>
+  <li *ngFor='let curso of obterCursos()'>
     {{ curso }}
   </li>
 </ul>
