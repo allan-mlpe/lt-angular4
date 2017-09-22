@@ -502,3 +502,7 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - pure: false -> para pipes impuros.
 
 - Construindo um filtro de arrays utilizando boas práticas (sem filtros, por questões de desempenho).
+
+<h4>Aula 48</h4>
+
+- Aplicando pipes em dados que demoram a estar disponíveis: o pipe async.
