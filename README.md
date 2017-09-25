@@ -509,6 +509,24 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 <h3>Módulo de Rotas</h3>
 <hr>
-<h4>Aula 48</h4>
+<h4>Aula 49</h4>
 
 - Introduzindo o conceito de Single Page Applications (SPA) e roteamento no Angular.
+
+<h4>Aula 50</h4>
+
+- Criando rotas básicas.
+
+- As classes Routes e RouterModule do pacote @angular/router.
+
+- const obj: Routes = [ {path: 'pathParaComponent', component: ExemploComponent}, ... ].
+
+- A classe ModuleWithProviders do pacote @angular/core.
+
+- RouterModule.forRoot: declaração das rotas principais (raízes) da aplicação. Ex.: /home, /login, etc.
+
+- RouterModule.forChild: declaração de rotas de funcionalidades da aplicação. Ex.: /cursos/angular, /usuario/admin/2, etc.
+
+- export const OBJ: ModuleWithProviders = RouterModule.forRoot(routesObt).
+
+- A tag router-outlet: habilitando o roteamento no app-component.
