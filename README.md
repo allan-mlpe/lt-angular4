@@ -530,3 +530,25 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - export const OBJ: ModuleWithProviders = RouterModule.forRoot(routesObt).
 
 - A tag router-outlet: habilitando o roteamento no app-component.
+
+<h4>Aula 51</h4>
+
+- Definindo rotas a nível de código: a diretiva routerLink.
+
+- routerLink="pathDoLink".
+
+<h4>Aula 52</h4>
+
+- Aplicando CSS em rotas ativas: a diretiva routerLinkActive.
+
+- routerLinkActive="nomeDaClasseASerAplicada".
+
+<h4>Aula 53</h4>
+
+- Passando parâmetros para rotas no Angular.
+
+- Utilizando o routerLink com property binding: [routerLink]="['pathDaRota', valorDoParametro]".
+
+- Capturando o valor de parâmetros utilizando a classe ActivatedRoute do pacote @angular/router.
+
+- objActivatedRoute.snapshot.params['nomeDoParam'].
