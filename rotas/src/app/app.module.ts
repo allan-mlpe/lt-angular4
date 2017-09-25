@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { ROUTING } from "./app.routing";
+import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ROUTING } from "./app.routing";
     AppComponent,
     LoginComponent,
     HomeComponent,
-    CursosComponent
+    CursosComponent,
+    CursoDetalheComponent
   ],
   imports: [
     BrowserModule,
