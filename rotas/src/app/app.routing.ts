@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
+import { CursoNaoEncontradoComponent } from "./curso-nao-encontrado/curso-nao-encontrado.component";
 
 /*
     O objeto do tipo Routes é um array que recebe objetos
@@ -17,6 +18,7 @@ const APP_ROUTES: Routes = [
     { path: '', component: HomeComponent },
     { path: 'cursos', component: CursosComponent},
     { path: 'curso/:id', component: CursoDetalheComponent},
+    { path: 'cursoNaoEncontrado', component: CursoNaoEncontradoComponent},
     { path: 'login', component: LoginComponent }
 ];
 
