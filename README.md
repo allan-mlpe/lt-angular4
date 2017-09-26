@@ -553,11 +553,15 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - objActivatedRoute.snapshot.params['nomeDoParam'].
 
+- Usamos o ActivatedRoute para obter parâmetros das rotas.
+
 <h4>Aula 54</h4>
 
 - Escutando mudanças nos parâmetros da URL.
 
 - Utilizando a classe Subscription do pacote rxjs/Rx.
+
+- Obtendo os parÂmetros de um objeto ActivatedRoute: obj.params.
 
 - Cancelando inscrições após destruir o componente: objSubscription.unsubscribe().
 
@@ -568,3 +572,17 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Redirecionando a aplicação utilizando o método navigate da classe Router.
 
 - objRouter.navigate(['pathDeRedirecionamento']).
+
+- Usamos o Router para alterar parâmetros das rotas.
+
+<h4>Aula 56</h4>
+
+- Passando e extraindo query params para/de rotas.
+
+- A diretiva queryParams: [queryParams]="{nomeParametro: valorParametro}".
+
+- Obtendo os query params de um objeto ActivatedRoute: obj.queryParams.
+
+- Alterando queryParams com o objeto Router.
+
+- objRouter.navigate(['pathParaRota'], { queryParams { chave: valor } }).
