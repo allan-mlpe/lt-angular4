@@ -552,3 +552,19 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Capturando o valor de parâmetros utilizando a classe ActivatedRoute do pacote @angular/router.
 
 - objActivatedRoute.snapshot.params['nomeDoParam'].
+
+<h4>Aula 54</h4>
+
+- Escutando mudanças nos parâmetros da URL.
+
+- Utilizando a classe Subscription do pacote rxjs/Rx.
+
+- Cancelando inscrições após destruir o componente: objSubscription.unsubscribe().
+
+<h4>Aula 55</h4>
+
+- Criando links imperativos com o ngFor.
+
+- Redirecionando a aplicação utilizando o método navigate da classe Router.
+
+- objRouter.navigate(['pathDeRedirecionamento']).
