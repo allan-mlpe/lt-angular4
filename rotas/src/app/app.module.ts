@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { ROUTING } from "./app.routing";
 import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
+import { CursosService } from "./cursos/cursos.service";
+import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-encontrado.component';
 
 
 @NgModule({
@@ -15,13 +17,16 @@ import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
     LoginComponent,
     HomeComponent,
     CursosComponent,
-    CursoDetalheComponent
+    CursoDetalheComponent,
+    CursoNaoEncontradoComponent
   ],
   imports: [
     BrowserModule,
     ROUTING //import da constante de rotas da aplicação
   ],
-  providers: [],
+  providers: [
+    CursosService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

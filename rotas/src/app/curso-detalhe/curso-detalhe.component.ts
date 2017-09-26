@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs/Rx';
+
+import { CursosService } from '../cursos/cursos.service';
 
 @Component({
   selector: 'app-curso-detalhe',
@@ -9,10 +11,14 @@ import { Subscription } from 'rxjs/Rx';
 })
 export class CursoDetalheComponent implements OnInit {
 
-  id: string;
+  id: number;
   inscricao: Subscription;
+  curso: any;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, 
+                private cursosService: CursosService,
+                private router: Router  
+              ) {
     console.log(route);
 
     //pegando o id que é passado na rota
@@ -30,6 +36,17 @@ export class CursoDetalheComponent implements OnInit {
       }
     );
 
+    this.curso = this.cursosService.getCursoById(this.id);
+
+    //se o curso não existir (undefined ou null)
+    if(!this.curso) {
+
+      // para o método navigate, passamos um objeto com
+      // a rota para o qual o router deve redirectionar
+      // (também podemos passar parâmetros como no routerLink)
+      this.router.navigate(['/cursoNaoEncontrado']);
+    }
+
   }
 
   ngOnDestroy() {
@@ -38,5 +55,4 @@ export class CursoDetalheComponent implements OnInit {
     //após o componente ser destruído
     this.inscricao.unsubscribe();
   }
-
 }

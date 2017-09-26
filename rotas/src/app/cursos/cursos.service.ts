@@ -13,6 +13,14 @@ export class CursosService {
     ];
   }
 
+  getCursoById(id: number)  {
+    const cursos = this.getCursos();
+
+    return cursos.find(cursoId => 
+        cursoId.id == id
+    );
+  }
+
   constructor() { }
 
 }
