@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { Subscription } from 'rxjs/Rx';
 
@@ -18,7 +18,10 @@ export class CursosComponent implements OnInit {
 
   inscricao: Subscription;
 
-  constructor(private cursosService: CursosService, private route: ActivatedRoute) {
+  constructor(
+    private cursosService: CursosService, 
+    private route: ActivatedRoute, 
+    private router: Router) {
 
    }
 
@@ -35,6 +38,12 @@ export class CursosComponent implements OnInit {
   ngOnDestroy() {
     //cancelando inscrição
     this.inscricao.unsubscribe();
+  }
+
+  proximaPagina() {
+    this.router.navigate(['/cursos'], {
+      queryParams: {pagina: ++this.pagina}
+    });
   }
 
 }
