@@ -10,6 +10,8 @@ import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
 import { CursosService } from "./cursos/cursos.service";
 import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-encontrado.component';
 
+//modulo de rotas
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-en
   ],
   imports: [
     BrowserModule,
-    ROUTING //import da constante de rotas da aplicação
+    AppRoutingModule
+    //ROUTING //import da constante de rotas da aplicação
   ],
   providers: [
     CursosService
