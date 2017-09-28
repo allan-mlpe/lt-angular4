@@ -591,3 +591,14 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - Criando um módulo de rotas: app.routing.module.ts.
 
+<h4>Aula 58</h4>
+
+- Refatorando o código e preparando o projeto para crescer: criando módulos de funcionalidade.
+
+- Não utilizamos o BrowserModule em módulos de funcionalidades, apenas no AppModule. Para módulos de funcionalidades, utilizamos o CommonModule.
+
+- Só declaramos um componente no metadato exports quando o mesmo for ser usado diretamente em outro módulo.
+
+<h4>Aula 59</h4>
+
+- 
