@@ -1,11 +1,11 @@
-import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
+import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.component';
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
-import { CursoNaoEncontradoComponent } from "./curso-nao-encontrado/curso-nao-encontrado.component";
+import { CursoNaoEncontradoComponent } from "./cursos/curso-nao-encontrado/curso-nao-encontrado.component";
 
 /*
     O objeto do tipo Routes é um array que recebe objetos

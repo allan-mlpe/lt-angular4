@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
-import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
+import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
