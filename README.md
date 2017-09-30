@@ -601,4 +601,6 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 <h4>Aula 59</h4>
 
-- 
+- Refatorando o código: criando um módulo de rotas para um módulo de funcionalidade.
+
+- Importando rotas de módulo de funcionalidade: RouterModule.forChild(rotasDeFuncionalidade).
