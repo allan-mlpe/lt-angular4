@@ -9,6 +9,8 @@ import { CursoNaoEncontradoComponent } from "./curso-nao-encontrado/curso-nao-en
 
 import { CursosService } from "./cursos.service";
 
+import { CursosRoutingModule } from './cursos.routing.module';
+
 @NgModule({
     declarations: [
         CursosComponent,
@@ -18,7 +20,8 @@ import { CursosService } from "./cursos.service";
 
     imports: [ 
         CommonModule,
-        RouterModule 
+        CursosRoutingModule
+        //RouterModule //como o CursosRoutingModule já exporta o RouterModule, não precisamos dele aqui de novo
     ],
 
     exports: [],
