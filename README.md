@@ -604,3 +604,13 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Refatorando o código: criando um módulo de rotas para um módulo de funcionalidade.
 
 - Importando rotas de módulo de funcionalidade: RouterModule.forChild(rotasDeFuncionalidade).
+
+<h4>Aula 60</h4>
+
+- Para evitar conflitos de rotas, devemos declarar as rotas estáticas antes de rotas similares que recebam parâmetros.
+
+- Criando rotas filhas: { path: "pathPai", component: PaiComponent, children: [ { path: "pathFilho", component: FilhoComponent  }, ... ] }.
+
+- O uso de rotas filhas permite que 2 ou mais componentes sejam renderizados na tela simultâneamente.
+
+- Importante: é necessário declarar a tag router-outlet no componente "base" que possui as rotas filhas, para que o mesmo possa renderizá-las de acordo com a URL no browser.
