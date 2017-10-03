@@ -614,3 +614,7 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - O uso de rotas filhas permite que 2 ou mais componentes sejam renderizados na tela simultâneamente.
 
 - Importante: é necessário declarar a tag router-outlet no componente "base" que possui as rotas filhas, para que o mesmo possa renderizá-las de acordo com a URL no browser.
+
+<h4>Aula 61</h4>
+
+- Construindo as telas da aplicação.
