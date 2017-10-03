@@ -2,6 +2,10 @@
   <div class="row">
     <div class="input-field col s12">
       <input disabled id="id" type="text" class="validate" [(ngModel)]="aluno.id">
+      <!-- 
+        para correção de bug de auto-preenchimento de inputs do
+        materialize utilizar a classe 'active' nos labels de cada
+      -->
       <label for="id"
       [ngClass]="{
         'active': aluno !== undefined
