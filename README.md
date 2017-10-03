@@ -618,3 +618,9 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 <h4>Aula 61</h4>
 
 - Construindo as telas da aplicação.
+
+- Criando um layout com exibição lado a lado com o Materialize.
+
+- Criação de formulários que serão auto-preenchidos com valores vindo do serviço de alunos.
+
+- Correção de bug nos inputs auto-preenchidos do materialize.
