@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ActivatedRoute } from "@angular/router";
+import { Subscription } from "rxjs";
+import { AlunosService } from "../alunos.service";
+
 @Component({
   selector: 'app-aluno-detalhe',
   templateUrl: './aluno-detalhe.component.html',
@@ -7,9 +11,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlunoDetalheComponent implements OnInit {
 
-  constructor() { }
+  private inscricao: Subscription;
+  aluno: any;
+
+  constructor(
+    private route: ActivatedRoute,
+    private alunoService: AlunosService
+  ) { }
 
   ngOnInit() {
+    this.inscricao = this.route.params.subscribe(
+      (params: any) => {
+        let id = params['id']; 
+
+        this.aluno = this.alunoService.getAlunoById(id);
+      }
+    );
   }
 
+  ngOnDestroy() {
+    this.inscricao.unsubscribe();
+  }
 }

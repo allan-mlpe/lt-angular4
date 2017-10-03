@@ -18,6 +18,18 @@ export class AlunosService {
     return this.alunos;
   }
 
+  /**
+   * Recupera um aluno da lista de alunos de acordo com o ID passado
+   * @param id id do aluno a ser recuperado
+   */
+  getAlunoById(id: number): any {
+    return this.alunos.find(
+      aluno => {
+        return aluno.id == id  
+      }
+    );
+  }
+
   constructor() { }
 
 }

@@ -9,7 +9,7 @@
         representando os parâmetros a serem passados 
       -->
       <li routerLinkActive="active"><a routerLink="/cursos" [queryParams]="{pagina: 1}">Cursos</a></li>
-      <li routerLinkActive="active"><a [routerLink]="['curso', idCurso.value]">Detalhes do Curso</a></li>
+      <!-- <li routerLinkActive="active"><a [routerLink]="['curso', idCurso.value]">Detalhes do Curso</a></li> -->
       <li routerLinkActive="active"><a routerLink="/alunos">Alunos</a></li>
     </ul>
   </div>
@@ -17,8 +17,8 @@
 
 <div class="container">
 
-    <p>Digite o ID do curso:</p> 
-    <input type="text" #idCurso (keyup)="0"/>
+    <!-- <p>Digite o ID do curso:</p> 
+    <input type="text" #idCurso (keyup)="0"/> -->
     <!-- 
       tag para habilitar o roteamento da aplicação
     -->
