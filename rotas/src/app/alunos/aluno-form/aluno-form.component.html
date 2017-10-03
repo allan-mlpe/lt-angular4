@@ -2,19 +2,34 @@
   <div class="row">
     <div class="input-field col s12">
       <input disabled id="id" type="text" class="validate" [(ngModel)]="aluno.id">
-      <label for="id">#</label>
+      <label for="id"
+      [ngClass]="{
+        'active': aluno !== undefined
+      }">
+        #
+      </label>
     </div>
   </div>
   <div class="row">
     <div class="input-field col s12">
       <input id="nome" type="text" class="validate" [(ngModel)]="aluno.nome">
-      <label for="nome">Nome</label>
+      <label for="nome"
+      [ngClass]="{
+        'active': aluno !== undefined
+      }">
+        Nome
+      </label>
     </div>
   </div>
   <div class="row">
     <div class="input-field col s12">
       <input id="email" type="email" class="validate" [(ngModel)]="aluno.email">
-      <label for="email">Email</label>
+      <label for="email"
+      [ngClass]="{
+        'active': aluno !== undefined
+      }">
+        Email
+      </label>
     </div>
   </div>
 </div>
