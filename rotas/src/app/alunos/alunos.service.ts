@@ -36,8 +36,15 @@ export class AlunosService {
       this.alunos[index] = aluno;
       
     } else {
+      aluno.id = this.getNextId();
       this.alunos.push(aluno);
     }
+  }
+
+  getNextId(): number {
+    let lastId = this.alunos[this.alunos.length-1].id;
+    console.log(lastId);
+    return ++lastId;
   }
 
   constructor() { }
