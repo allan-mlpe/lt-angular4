@@ -9,6 +9,12 @@ import { HomeComponent } from './home/home.component';
 //import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso-nao-encontrado.component';
 
 const appRoutes: Routes = [
+    //===================== CONFIGURAÇÃO PARA LAZY LOADING =====================
+    //para o loadChindren devemos passar o caminho completo do MÓDULO requerido
+    { path: 'cursos', loadChildren: 'app/cursos/cursos.module#CursosModule' },
+    { path: 'alunos', loadChildren: 'app/alunos/alunos.module#AlunosModule' },
+    
+    //==========================================================================
     //{ path: 'cursos', component: CursosComponent},
     //{ path: 'curso/:id', component: CursoDetalheComponent},
     //{ path: 'cursoNaoEncontrado', component: CursoNaoEncontradoComponent },

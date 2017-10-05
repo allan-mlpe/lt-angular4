@@ -6,9 +6,13 @@ import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-en
 import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
 
 const cursosRoutes: Routes = [
-    {path: "cursos", component: CursosComponent},
-    {path: "curso/:id", component: CursoDetalheComponent},
-    {path: "cursoNaoEncontrado", component: CursoNaoEncontradoComponent}
+    /* 
+        como já declaramos 'cursos' no AppRoutingModule para o 
+        lazy loading podemos passar aqui a string vazia como base
+    */
+    {path: "", component: CursosComponent},
+    {path: "cursoNaoEncontrado", component: CursoNaoEncontradoComponent},
+    {path: ":id", component: CursoDetalheComponent}
 ];
 
 @NgModule({

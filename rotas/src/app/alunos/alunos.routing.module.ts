@@ -13,7 +13,11 @@ import { AlunoFormComponent } from './aluno-form/aluno-form.component';
     Devemos declarar sempre as rotas hardcoded primeiro.
 */
 const alunosRoutes: Routes = [
-    { path: "alunos", component: AlunosComponent, children: [
+    /*
+        como já declaramos a rota "alunos" no AppRoutingModule
+        podemos passar a string vazia como base aqui
+    */
+    { path: "", component: AlunosComponent, children: [
         { path: "novo", component: AlunoFormComponent },
         { path: ":id", component: AlunoDetalheComponent },
         { path: ":id/editar", component: AlunoFormComponent }

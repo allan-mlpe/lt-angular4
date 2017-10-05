@@ -8,8 +8,10 @@ import { HomeComponent } from './home/home.component';
 
 //modulo de rotas
 import { AppRoutingModule } from './app.routing.module';
-import { CursosModule } from './cursos/cursos.module';
-import { AlunosModule } from './alunos/alunos.module';
+
+//módulos de funcionalidades
+//import { CursosModule } from './cursos/cursos.module';
+//import { AlunosModule } from './alunos/alunos.module';
 
 @NgModule({
   declarations: [
@@ -19,8 +21,8 @@ import { AlunosModule } from './alunos/alunos.module';
   ],
   imports: [
     BrowserModule,
-    CursosModule,
-    AlunosModule,
+    //CursosModule, // para utilizar o lazy loading, os módulos não devem ser
+    //AlunosModule, // importados em nenhum outro lugar da app que não o AppRoutingModule
     AppRoutingModule
     //ROUTING //import da constante de rotas da aplicação
   ],

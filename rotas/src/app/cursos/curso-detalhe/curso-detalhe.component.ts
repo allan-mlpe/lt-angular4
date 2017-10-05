@@ -21,14 +21,18 @@ export class CursoDetalheComponent implements OnInit {
               ) {
     console.log(route);
 
-    //pegando o id que é passado na rota
-    //o nome 'id' foi definido na configuração da rota no app.routing.ts
-    //this.id = this.route.snapshot.params['id'];
+    /*
+      pegando o id que é passado na rota
+      o nome 'id' foi definido na configuração da rota no app.routing.ts
+      this.id = this.route.snapshot.params['id'];
+    */
    }
 
   ngOnInit() {
-    // realizamos uma inscrição no objeto params da 
-    // ActivatedRoute para ouvir mudanças quando elas ocorrerem
+    /* 
+      realizamos uma inscrição no objeto params da 
+      ActivatedRoute para ouvir mudanças quando elas ocorrerem
+    */
     this.inscricao = this.route.params.subscribe(
       (params: any) => {
         // atribuindo o valor do parâmetro 'id' do obj params 
@@ -41,18 +45,22 @@ export class CursoDetalheComponent implements OnInit {
     //se o curso não existir (undefined ou null)
     if(!this.curso) {
 
-      // para o método navigate, passamos um objeto com
-      // a rota para o qual o router deve redirectionar
-      // (também podemos passar parâmetros como no routerLink)
-      this.router.navigate(['/cursoNaoEncontrado']);
+      /* 
+        para o método navigate, passamos um objeto com
+        a rota para o qual o router deve redirectionar
+        também podemos passar parâmetros como no routerLink)
+       */
+      this.router.navigate(['/cursos/cursoNaoEncontrado']);
     }
 
   }
 
   ngOnDestroy() {
-    //cancelamos a inscrição ao destruir o componente
-    //uma vez que a mesma fica ativa por default mesmo
-    //após o componente ser destruído
+    /*
+      cancelamos a inscrição ao destruir o componente
+      uma vez que a mesma fica ativa por default mesmo
+      após o componente ser destruído
+    */
     this.inscricao.unsubscribe();
   }
 }
