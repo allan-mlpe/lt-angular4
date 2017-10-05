@@ -37,6 +37,10 @@ export class AlunoFormComponent implements OnInit {
     return this.aluno === undefined || (this.aluno.id === '' && this.aluno.nome === '' && this.aluno.email === '');
   }
 
+  saveAluno() {
+    this.alunosService.saveAluno(this.aluno);
+  }
+
   ngOnDestroy() {
     this.inscricao.unsubscribe();
   }

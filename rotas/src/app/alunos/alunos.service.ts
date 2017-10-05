@@ -30,6 +30,16 @@ export class AlunosService {
     );
   }
 
+  saveAluno(aluno: any): void {
+    if(aluno.id) {
+      let index = this.alunos.findIndex(al => al.id == aluno.id);
+      this.alunos[index] = aluno;
+      
+    } else {
+      this.alunos.push(aluno);
+    }
+  }
+
   constructor() { }
 
 }
