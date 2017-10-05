@@ -23,11 +23,11 @@ export class AlunosService {
    * @param id id do aluno a ser recuperado
    */
   getAlunoById(id: number): any {
-    return this.alunos.find(
+    return Object.assign({}, this.alunos.find(
       aluno => {
         return aluno.id == id  
       }
-    );
+    ));
   }
 
   saveAluno(aluno: any): void {
