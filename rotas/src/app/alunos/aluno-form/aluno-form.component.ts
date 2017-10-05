@@ -24,7 +24,8 @@ export class AlunoFormComponent implements OnInit {
       (params: any) => {
         let id = params['id'];
 
-        this.aluno = this.alunosService.getAlunoById(id);
+        //criando uma cópia do objeto para evitar alterar a mesma referência
+        this.aluno = Object.assign({}, this.alunosService.getAlunoById(id));
 
         if(this.aluno === undefined) {
           this.aluno = { id: '', nome: '', email: '' };
@@ -39,6 +40,7 @@ export class AlunoFormComponent implements OnInit {
 
   saveAluno() {
     this.alunosService.saveAluno(this.aluno);
+    this.aluno = { id: '', nome: '', email: '' };
   }
 
   ngOnDestroy() {
