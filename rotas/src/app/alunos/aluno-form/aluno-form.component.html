@@ -12,7 +12,7 @@
       -->
       <label for="id"
       [ngClass]="{
-        'active': !isAlunoEmpty()
+        'active': aluno.id || aluno.id !== ''
       }">
         #
       </label>
@@ -23,7 +23,7 @@
       <input id="nome" type="text" class="validate" [(ngModel)]="aluno.nome">
       <label for="nome"
       [ngClass]="{
-        'active': !isAlunoEmpty()
+        'active': aluno.nome || aluno.nome !== ''
       }">
         Nome
       </label>
@@ -34,10 +34,12 @@
       <input id="email" type="email" class="validate" [(ngModel)]="aluno.email">
       <label for="email"
       [ngClass]="{
-        'active': !isAlunoEmpty()
+        'active': aluno.email || aluno.email !== ''
       }">
         Email
       </label>
     </div>
   </div>
+
+  <button class="waves-effect waves-light btn" (click)="saveAluno()">Salvar</button>
 </div>
