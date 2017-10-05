@@ -624,3 +624,15 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Criação de formulários que serão auto-preenchidos com valores vindo do serviço de alunos.
 
 - Correção de bug nos inputs auto-preenchidos do materialize.
+
+<h4>Aula 62</h4>
+
+- Utilizando o conceito de lazy loading para melhorar o desempenho da aplicação.
+
+- 1º passo: declarar rota base do módulo + caminho completo para classe módulo no AppRoutingModule.
+
+- Ex.: { path: 'pathBaseParaModulo', loadChildren: 'app/funcionalidade/modulo-funcionalidade.module#ModuloFuncionalidadeModule' }.
+
+- Excluir todas as referências de imports dos módulos de funcionalidades que serão carregados sob demanda de todos os outros lugares da aplicação que não o AppRouting (ver app.module.ts).
+
+- Remover a rota base declarada no AppRouting do módulo de routing da funcionalidade (ver alunos.routing.module.ts e cursos.routing.module.ts).
