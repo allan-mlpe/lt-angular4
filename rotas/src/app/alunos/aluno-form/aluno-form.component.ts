@@ -25,8 +25,16 @@ export class AlunoFormComponent implements OnInit {
         let id = params['id'];
 
         this.aluno = this.alunosService.getAlunoById(id);
+
+        if(this.aluno === undefined) {
+          this.aluno = { id: '', nome: '', email: '' };
+        }
       }
     );
+  }
+
+  isAlunoEmpty(): boolean {
+    return this.aluno === undefined || (this.aluno.id === '' && this.aluno.nome === '' && this.aluno.email === '');
   }
 
   ngOnDestroy() {
