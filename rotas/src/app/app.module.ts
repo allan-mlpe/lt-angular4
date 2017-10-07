@@ -1,3 +1,4 @@
+import { AuthService } from './login/auth.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -26,7 +27,7 @@ import { AppRoutingModule } from './app.routing.module';
     AppRoutingModule
     //ROUTING //import da constante de rotas da aplicação
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
