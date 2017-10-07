@@ -636,3 +636,15 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Excluir todas as referências de imports dos módulos de funcionalidades que serão carregados sob demanda de todos os outros lugares da aplicação que não o AppRouting (ver app.module.ts).
 
 - Remover a rota base declarada no AppRouting do módulo de routing da funcionalidade (ver alunos.routing.module.ts e cursos.routing.module.ts).
+
+<h4>Aula 63</h4>
+
+- Exercitando a criação de módulos de funcionalidade: o módulo de login.
+
+- Criando um serviço simples de autenticação.
+
+- Emitindo eventos em um serviço com o EventEmitter: usuarioLogado.
+
+- Escutando os eventos emitidos pelo serviço: this.nomeDoServico.nomeDoEventEmitter.subscribe().
+
+- Mostrando/exibindo elementos caso o usuário esteja logado no sistema.
