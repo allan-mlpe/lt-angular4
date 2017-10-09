@@ -7,6 +7,10 @@ import { AuthService } from './../login/auth.service';
 @Injectable()
 export class AuthGuard implements CanActivate {
 
+  /*
+   * Este método é executado antes da exibição de um componente
+   * de acordo com as rotas configuradas no app.routing.module.ts
+   */
   canActivate(
     route: ActivatedRouteSnapshot, 
     state: RouterStateSnapshot
