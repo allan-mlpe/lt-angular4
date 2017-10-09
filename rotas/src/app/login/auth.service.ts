@@ -19,6 +19,10 @@ export class AuthService {
     this.mostrarMenu.emit(this.usuarioAutenticado);
   }
 
+  usuarioLogado(): boolean {
+    return this.usuarioAutenticado;
+  }
+
   constructor(private router: Router) { }
 
 }
