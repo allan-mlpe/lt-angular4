@@ -648,3 +648,13 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Escutando os eventos emitidos pelo serviço: this.nomeDoServico.nomeDoEventEmitter.subscribe().
 
 - Mostrando/exibindo elementos caso o usuário esteja logado no sistema.
+
+<h4>Aula 64</h4>
+
+- Permitindo/negando o acesso de usuários às rotas da aplicação: as guardas de rotas.
+
+- Checando algo ANTES de um componente ser usado: a interface CanActivate do pacote @angular/router.
+
+- Declarando a guarda de rotas no app.routing.module.ts: { path: 'pathDaRota', loadChildren: 'caminhoDoArquivoDeRotas#ArquivoDeRotas', canActivate: [GuardaDeRota]}.
+
+- A guarda de rota também deve ser declarada no metadado providers do app.module.
