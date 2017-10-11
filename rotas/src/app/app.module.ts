@@ -1,7 +1,5 @@
-import { AuthGuard } from './guards/auth-guard';
-import { AuthService } from './login/auth.service';
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 //import { LoginComponent } from './login/login.component';
@@ -14,6 +12,12 @@ import { AppRoutingModule } from './app.routing.module';
 //módulos de funcionalidades
 //import { CursosModule } from './cursos/cursos.module';
 //import { AlunosModule } from './alunos/alunos.module';
+
+import { AuthService } from './login/auth.service';
+
+import { AuthGuard } from './guards/auth-guard';
+import { CursosGuard } from './guards/cursos-guard';
+import { AlunosGuard } from './guards/alunos-guard';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,9 @@ import { AppRoutingModule } from './app.routing.module';
   ],
   providers: [
     AuthService,
-    AuthGuard //também declaramos a guarda de rotas no providers
+    AuthGuard, //também declaramos a guarda de rotas no providers
+    CursosGuard,
+    AlunosGuard
   ],
   bootstrap: [AppComponent]
 })

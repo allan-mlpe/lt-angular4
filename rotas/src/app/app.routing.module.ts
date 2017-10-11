@@ -9,17 +9,21 @@ import { HomeComponent } from './home/home.component';
 //import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso-nao-encontrado.component';
 
 import { AuthGuard } from './guards/auth-guard';
+import { AlunosGuard } from './guards/alunos-guard';
+import { CursosGuard } from './guards/cursos-guard';
 
 const appRoutes: Routes = [
     //===================== CONFIGURAÇÃO PARA LAZY LOADING =====================
     //para o loadChindren devemos passar o caminho completo do MÓDULO requerido
     { path: 'cursos', 
         loadChildren: 'app/cursos/cursos.module#CursosModule',
-        canActivate: [AuthGuard] //declaramos a guarda de rotas no metadado canActivate
+        canActivate: [AuthGuard], //declaramos a guarda de rotas no metadado canActivate
+        canActivateChild: [CursosGuard] //também declaramos guarda de rotas filhas no metadado canActivateChild
     },
     { path: 'alunos', 
         loadChildren: 'app/alunos/alunos.module#AlunosModule',
-        canActivate: [AuthGuard]
+        canActivate: [AuthGuard],
+        canActivateChild: [AlunosGuard]
     },
     { path: 'login', 
          loadChildren: 'app/login/login.module#LoginModule'
