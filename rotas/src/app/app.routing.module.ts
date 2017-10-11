@@ -22,8 +22,10 @@ const appRoutes: Routes = [
     },
     { path: 'alunos', 
         loadChildren: 'app/alunos/alunos.module#AlunosModule',
-        canActivate: [AuthGuard],
-        canActivateChild: [AlunosGuard]
+        canActivate: [AuthGuard]/*,
+        canActivateChild: [AlunosGuard]*/ //podemos usar a guarda de rotas filhas no módulo de alunos também
+                                          //isso faz com que a guarda de rotas filhas não seja ativada no acesso à rota pai
+                                          //AlunosGuard será declarada no alunos.routing.module.ts
     },
     { path: 'login', 
          loadChildren: 'app/login/login.module#LoginModule'

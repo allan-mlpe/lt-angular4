@@ -17,7 +17,7 @@ import { AuthService } from './login/auth.service';
 
 import { AuthGuard } from './guards/auth-guard';
 import { CursosGuard } from './guards/cursos-guard';
-import { AlunosGuard } from './guards/alunos-guard';
+//import { AlunosGuard } from './guards/alunos-guard';
 
 @NgModule({
   declarations: [
@@ -35,8 +35,8 @@ import { AlunosGuard } from './guards/alunos-guard';
   providers: [
     AuthService,
     AuthGuard, //também declaramos a guarda de rotas no providers
-    CursosGuard,
-    AlunosGuard
+    CursosGuard/*,
+    AlunosGuard*/ //guarda de rotas filhas de alunos movida para o alunos.module.ts
   ],
   bootstrap: [AppComponent]
 })
