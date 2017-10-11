@@ -13,6 +13,12 @@ export class AlunosGuard implements CanActivateChild {
         console.log('CanActivateChild notification [FROM AlunosGuard]');
         console.log(childRoute);
         console.log(state);
+
+        //negando o acesso do usuário à rota que contém 'editar'
+        if(state.url.includes('editar')) {
+            alert('Você não tem permissão para editar alunos.');
+            return false;
+        }
         
         return true;
     }
