@@ -658,3 +658,15 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Declarando a guarda de rotas no app.routing.module.ts: { path: 'pathDaRota', loadChildren: 'caminhoDoArquivoDeRotas#ArquivoDeRotas', canActivate: [GuardaDeRota]}.
 
 - A guarda de rota também deve ser declarada no metadado providers do app.module.
+
+<h4>Aula 65</h4>
+
+- Criação de guarda de rotas filhas: a interface CanActivateChild do pacote @angular/router.
+
+- { path: 'pathDaRota', loadChildren: 'caminhoDoArquivoDeRotas#ArquivoDeRotas', canActivate: [GuardaDeRota], canActivateChild: [GuardaDeRotaFilha]}.
+
+- Obtendo parâmetros e outras informações da URL: ActivateRouteSnapshot e RouterStateSnapshot.
+
+- Bloqueando o acesso à uma rota específica de acordo com as permissões do usuário.
+
+- Refactoring: incluindo as guardas de rotas filhas nos módulos de funcionalidade (alunos.module e alunos.routing.module).
