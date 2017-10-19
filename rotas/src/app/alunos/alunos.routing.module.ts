@@ -7,6 +7,7 @@ import { AlunoDetalheComponent } from './aluno-detalhe/aluno-detalhe.component';
 import { AlunoFormComponent } from './aluno-form/aluno-form.component';
 
 import { AlunosGuard } from './../guards/alunos-guard';
+import { AlunosDeactivateGuard } from './../guards/alunos-deactivate-guard';
 
 /*
     Declaramos primeiro alunos/novo para evitar 
@@ -23,9 +24,10 @@ const alunosRoutes: Routes = [
         canActivateChild: [AlunosGuard], //guarda de rotas filhas só será ativada quando
                                          //do acesso à alguma das rotas filhas declaradas abaixo
         children: [
-            { path: "novo", component: AlunoFormComponent },
+            //abaixo temos a declaração da guarda no metadado canDeactivate
+            { path: "novo", component: AlunoFormComponent, canDeactivate: [AlunosDeactivateGuard] },
             { path: ":id", component: AlunoDetalheComponent },
-            { path: ":id/editar", component: AlunoFormComponent }
+            { path: ":id/editar", component: AlunoFormComponent, canDeactivate: [AlunosDeactivateGuard] }
         ]
     }
 ];

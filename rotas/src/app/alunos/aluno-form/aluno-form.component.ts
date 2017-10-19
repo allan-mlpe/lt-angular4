@@ -12,6 +12,7 @@ export class AlunoFormComponent implements OnInit {
 
   private inscricao: Subscription;
   aluno: any;
+  private formMudou = false;
 
   constructor(
     private routes: ActivatedRoute,
@@ -41,9 +42,22 @@ export class AlunoFormComponent implements OnInit {
   saveAluno() {
     this.alunosService.saveAluno(this.aluno);
     this.aluno = { id: '', nome: '', email: '' };
+    this.formMudou = false;
   }
 
   ngOnDestroy() {
     this.inscricao.unsubscribe();
+  }
+
+  onInput() {
+    this.formMudou = true;
+  }
+
+  podeMudarRota() {
+    let pode = true;
+    if(this.formMudou) {
+      pode = confirm("Deseja sair sem salvar as alterações?");
+    }
+    return pode;
   }
 }

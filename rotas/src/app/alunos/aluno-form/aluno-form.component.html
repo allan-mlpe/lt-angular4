@@ -5,7 +5,7 @@
 <div class="col s12">
   <div class="row">
     <div class="input-field col s12">
-      <input disabled id="id" type="text" class="validate" [(ngModel)]="aluno.id">
+      <input disabled id="id" type="text" class="validate" [(ngModel)]="aluno.id" (input)="onInput()">
       <!-- 
         para correção de bug de auto-preenchimento de inputs do
         materialize utilizar a classe 'active' nos labels de cada
@@ -20,7 +20,7 @@
   </div>
   <div class="row">
     <div class="input-field col s12">
-      <input id="nome" type="text" class="validate" [(ngModel)]="aluno.nome">
+      <input id="nome" type="text" class="validate" [(ngModel)]="aluno.nome" (input)="onInput()">
       <label for="nome"
       [ngClass]="{
         'active': aluno.nome || aluno.nome !== ''
@@ -31,7 +31,7 @@
   </div>
   <div class="row">
     <div class="input-field col s12">
-      <input id="email" type="email" class="validate" [(ngModel)]="aluno.email">
+      <input id="email" type="email" class="validate" [(ngModel)]="aluno.email" (input)="onInput()">
       <label for="email"
       [ngClass]="{
         'active': aluno.email || aluno.email !== ''
