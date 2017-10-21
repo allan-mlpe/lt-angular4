@@ -670,3 +670,11 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Bloqueando o acesso à uma rota específica de acordo com as permissões do usuário.
 
 - Refactoring: incluindo as guardas de rotas filhas nos módulos de funcionalidade (alunos.module e alunos.routing.module).
+
+<h4>Aula 66</h4>
+
+- Guarda de rota executada ao sair de uma rota específica: CanDeactivate.
+
+- As guardas do tipo CanDeactivate são úteis quando um usuário edita um formulário e tenda sair sem salvar as alterações, por exemplo. Neste caso, a guarda podemos desenvolver alguma lógica a ser executada quando o usuário tenta deixar a rota.
+
+- Declarando uma rota do tipo canActivate em um arquivo de roteamento: { path: ..., component: ..., canDeactivate: [GuardaQueImplementaCanDeactivate] }.
