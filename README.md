@@ -678,3 +678,11 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - As guardas do tipo CanDeactivate são úteis quando um usuário edita um formulário e tenda sair sem salvar as alterações, por exemplo. Neste caso, a guarda podemos desenvolver alguma lógica a ser executada quando o usuário tenta deixar a rota.
 
 - Declarando uma rota do tipo canActivate em um arquivo de roteamento: { path: ..., component: ..., canDeactivate: [GuardaQueImplementaCanDeactivate] }.
+
+<h4>Aula 67</h4>
+
+- Tornando a guarda de rotas de desativação mais genérica: criando interface com método a ser implementado por componentes.
+
+- A interface criada deve ser passada como o tipo na guarda de que implementa CanDeactivate.
+
+- Os componentes que forem usar a guarda genérica devem implementar a interface criada e o(s) seu(s) método(s).
