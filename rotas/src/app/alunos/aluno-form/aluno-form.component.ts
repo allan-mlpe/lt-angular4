@@ -3,12 +3,14 @@ import { Subscription } from "rxjs";
 import { ActivatedRoute, Router } from "@angular/router";
 import { AlunosService } from "../alunos.service";
 
+import { IFormCanDeactivate } from './../../guards/Iform-candeactivate';
+
 @Component({
   selector: 'app-aluno-form',
   templateUrl: './aluno-form.component.html',
   styleUrls: ['./aluno-form.component.css']
 })
-export class AlunoFormComponent implements OnInit {
+export class AlunoFormComponent implements OnInit, IFormCanDeactivate {
 
   private inscricao: Subscription;
   aluno: any;
@@ -59,5 +61,10 @@ export class AlunoFormComponent implements OnInit {
       pode = confirm("Deseja sair sem salvar as alterações?");
     }
     return pode;
+  }
+
+  //implementação do método da interface genérica para a desativação de rotas
+  podeDesativar() {
+    return this.podeMudarRota();
   }
 }
