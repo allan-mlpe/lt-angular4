@@ -693,8 +693,8 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - Atalho para criar um Resolver com a ajuda da IDE (Visual Studio Code): angResolveFull/angResolveSimple.
 
-- Declarando o resolver na configuração de rotas: { path: ..., component: ..., resolve: { nomeDoDaDo : NomeDoResolver } } -> ver arquivo alunos.routing.module.ts.
+- Declarando o resolver na configuração de rotas: { path: ..., component: ..., resolve: { nomeDoDaDo : NomeDoResolver } } -> ver arquivo [alunos.routing.module.ts](rotas/src/app/alunos/alunos.routing.module.ts).
 
 - Também devemos declarar o Resolver criado nos providers do módulo em questão.
 
-- Recuperando dados vindo do resolver: this.objActivatedRoute.data.subscribe( (info) => info['nomeDoDado'] ) -> ver arquivo aluno-detalhe.component.ts.
+- Recuperando dados vindo do resolver: this.objActivatedRoute.data.subscribe( (info) => info['nomeDoDado'] ) -> ver arquivo [aluno-detalhe.component.ts](rotas/src/app/alunos/aluno-detalhe/aluno-detalhe.component.ts).
