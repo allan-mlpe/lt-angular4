@@ -1,3 +1,4 @@
+import { AlunoDetalheResolver } from './guards/aluno-detalhe.resolver';
 import { NgModule } from '@angular/core';
 
 import { Routes, RouterModule } from '@angular/router';
@@ -26,7 +27,18 @@ const alunosRoutes: Routes = [
         children: [
             //abaixo temos a declaração da guarda no metadado canDeactivate
             { path: "novo", component: AlunoFormComponent, canDeactivate: [AlunosDeactivateGuard] },
-            { path: ":id", component: AlunoDetalheComponent },
+            { path: ":id", component: AlunoDetalheComponent,
+                /*
+                    declaração de um resolver
+                    
+                    - aluno:  o nome do parâmetro que será passado
+                              para as informações da rota que será
+                              carregada no AlunoDetalheComponent
+
+                    - AlunoDetalheResolver: o resolver propriamente dito
+                */
+                resolve: { aluno : AlunoDetalheResolver } 
+            },
             { path: ":id/editar", component: AlunoFormComponent, canDeactivate: [AlunosDeactivateGuard] }
         ]
     }

@@ -1,3 +1,4 @@
+import { AlunoDetalheResolver } from './guards/aluno-detalhe.resolver';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -25,7 +26,8 @@ import { AlunosDeactivateGuard} from './../guards/alunos-deactivate-guard';
   providers: [
     AlunosService,
     AlunosGuard, //declaração de guarda de rotas filhas do módulo
-    AlunosDeactivateGuard
+    AlunosDeactivateGuard,
+    AlunoDetalheResolver //também é necessário declarar o resolver criado
   ]
 })
 export class AlunosModule { }
