@@ -686,3 +686,15 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - A interface criada deve ser passada como o tipo na guarda de que implementa CanDeactivate.
 
 - Os componentes que forem usar a guarda genérica devem implementar a interface criada e o(s) seu(s) método(s).
+
+<h4>Aula 68</h4>
+
+- Carregando dados antes da rota ser ativada: a interface Resolve.
+
+- Atalho para criar um Resolver com a ajuda da IDE (Visual Studio Code): angResolveFull/angResolveSimple.
+
+- Declarando o resolver na configuração de rotas: { path: ..., component: ..., resolve: { nomeDoDaDo : NomeDoResolver } } -> ver arquivo alunos.routing.module.ts.
+
+- Também devemos declarar o Resolver criado nos providers do módulo em questão.
+
+- Recuperando dados vindo do resolver: this.objActivatedRoute.data.subscribe( (info) => info['nomeDoDado'] ) -> ver arquivo aluno-detalhe.component.ts.
