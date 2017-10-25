@@ -16,6 +16,12 @@ export class AuthGuard implements CanActivate, CanLoad {
     state: RouterStateSnapshot
   ): boolean | Observable<boolean> | Promise<boolean> {
     
+    console.log("AuthGuard: canActivate");
+
+    return this.verificarAcesso();
+  }
+
+  private verificarAcesso() {
     const usuarioLogado: boolean = this.authService.usuarioLogado();
 
     if(usuarioLogado) {
@@ -31,17 +37,18 @@ export class AuthGuard implements CanActivate, CanLoad {
       o mesmo para a página de login e retorna falso
     */
     this.router.navigate(['/login']);
-    console.log('usuário não autorizado [from AuthGuard]');
     return false;
   }
 
   /**
    * Método da interface CanLoad que permite ou não baixar o código
-   * de determinada rota de acordo com as permissões do usuário no momento
+   * de determinado módulo de acordo com as permissões do usuário no momento
    * @param route 
    */
-  canLoad(route: Route): Observable<boolean> | Promise<boolean> | boolean {
-    return true;
+  canLoad(route: Route): Observable<boolean>|Promise<boolean>|boolean {
+    console.log("canLoad: vertificando se o usuário pode baixar o código do módulo...");
+    
+    return this.verificarAcesso();
   }
 
   constructor(
