@@ -30,8 +30,7 @@ const appRoutes: Routes = [
         canLoad: [AuthGuard]
     },
     { path: 'login', 
-         loadChildren: 'app/login/login.module#LoginModule',
-         canLoad: [AuthGuard]
+         loadChildren: 'app/login/login.module#LoginModule'
     },
     //==========================================================================
     //{ path: 'cursos', component: CursosComponent},
@@ -40,7 +39,8 @@ const appRoutes: Routes = [
     //{ path: 'login', component: LoginComponent },
     { path: '', 
         component: HomeComponent,
-        canActivate: [AuthGuard]
+        canActivate: [AuthGuard],
+        canLoad: [AuthGuard]
     }
 ];
 
