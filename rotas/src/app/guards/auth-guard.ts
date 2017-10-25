@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from "@angular/router";
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router, CanLoad, Route } from "@angular/router";
 import { Observable } from "rxjs/Rx";
 
 import { AuthService } from './../login/auth.service';
 
 @Injectable()
-export class AuthGuard implements CanActivate {
+export class AuthGuard implements CanActivate, CanLoad {
 
   /*
    * Este método é executado antes da exibição de um componente
@@ -33,6 +33,15 @@ export class AuthGuard implements CanActivate {
     this.router.navigate(['/login']);
     console.log('usuário não autorizado [from AuthGuard]');
     return false;
+  }
+
+  /**
+   * Método da interface CanLoad que permite ou não baixar o código
+   * de determinada rota de acordo com as permissões do usuário no momento
+   * @param route 
+   */
+  canLoad(route: Route): Observable<boolean> | Promise<boolean> | boolean {
+    return true;
   }
 
   constructor(
