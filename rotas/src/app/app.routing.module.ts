@@ -3,6 +3,7 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
+import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
 //import { LoginComponent } from './login/login.component';
 //import { CursosComponent } from './cursos/cursos.component';
 //import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.component';
@@ -41,6 +42,15 @@ const appRoutes: Routes = [
         component: HomeComponent,
         canActivate: [AuthGuard],
         canLoad: [AuthGuard]
+    },
+    /*
+        é importante que a rota com o padrão ** (ou seja, qualquer outra coisa que não foi declarada)
+        seja declarada por último. Caso contrário quaquer rota que esteja declarada após a mesma será
+        desconsiderada, causando problemas na aplicação.
+    */
+    { path: '**',
+        component: PaginaNaoEncontradaComponent,
+        canActivate: [AuthGuard]
     }
 ];
 
