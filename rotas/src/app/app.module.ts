@@ -17,13 +17,15 @@ import { AuthService } from './login/auth.service';
 
 import { AuthGuard } from './guards/auth-guard';
 import { CursosGuard } from './guards/cursos-guard';
+import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
 //import { AlunosGuard } from './guards/alunos-guard';
 
 @NgModule({
   declarations: [
     AppComponent,
     //LoginComponent,
-    HomeComponent
+    HomeComponent,
+    PaginaNaoEncontradaComponent
   ],
   imports: [
     BrowserModule,
