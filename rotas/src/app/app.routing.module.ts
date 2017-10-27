@@ -38,10 +38,27 @@ const appRoutes: Routes = [
     //{ path: 'curso/:id', component: CursoDetalheComponent},
     //{ path: 'cursoNaoEncontrado', component: CursoNaoEncontradoComponent },
     //{ path: 'login', component: LoginComponent },
-    { path: '', 
+    { path: 'home', 
         component: HomeComponent,
         canActivate: [AuthGuard],
         canLoad: [AuthGuard]
+    },
+    /*
+        REDIRECIONAMENTO: sempre que o usuário digitar o caminho da aplicação "vazio",
+        ele será direcionado para /home. É obrigatório explicitar o pathMatch, que pode
+        receber os valores: full ou prefix.
+
+        full: utilizamos quando queremos fazer alguma validação da rota por inteiro,
+                como geralmente ocorre nas rotas de root da aplicação.
+
+        prefix: mais indicado quando estamos trabalhando com rotas filhas. Utilizamos
+                quando será necessário validar um prefixo da rota antes, por exemplo:
+                alunos/id/edit - e queremos validar antes o /aluno/id.
+    */
+    {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full'
     },
     /*
         é importante que a rota com o padrão ** (ou seja, qualquer outra coisa que não foi declarada)
