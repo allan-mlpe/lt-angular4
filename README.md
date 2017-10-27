@@ -704,3 +704,20 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Impedindo que o código (ou bundles) da aplicação sejam baixados quando o usuário não está logado: a interface CanLoad do pacote @angular/router.
 
 - Reaproveitando uma guarda já criada para implementar a interface CanLoad ver [auth-guard.ts](rotas/src/app/guards/auth-guard.ts).
+
+<h4>Aula 70</h4>
+
+- Configurando o app.routing.module para tratar rotas inexistentes: incluindo um componente de página não encontrada.
+
+- Devemos declarar a rota de path = '**' por último, uma vez que ela irá tratar qualquer rota que não fora definida antes.
+
+- Ex.: const appRoutes: Routes [ { path: 'path1' ...}, ..., { path: '**', component: PaginaNaoEncontradaComponent }].
+
+- Fazendo redirecionamento de rotas no app.routing.module.
+
+- Ex. de redirecionamento: { path: 'path1', redirectTo: 'path2', pathMatch: 'full'}.
+
+- A definição do pathMatch acima é OBRIGATÓRIA e pode receber os valores 'full' (para validação da rota inteira, geralmente usada nas rotas de root da aplicação) ou 'prefix' (para fazer verificações em prefixo da rota, geralmente usada em rotas filhas).
+
+- Utilizando a propriedade routerLinkActivateOptions para aplicar a classe CSS de rota ativa apenas quando a rota obedecer exatamente o padrão definido no routerLink (ver [app.component.html](rotas/src/app/app.component.html)). 
+
