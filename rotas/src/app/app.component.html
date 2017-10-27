@@ -4,6 +4,15 @@
     <a routerLink="" class="brand-logo right">Rotas</a>
     <ul id="nav-mobile" class="left hide-on-med-and-down">
       <li routerLinkActive="active"><a routerLink="/login">Login</a></li>
+
+      <!-- 
+        propriedade com routerLinkActiveOptions para que a classe ativa
+        só seja aplicada quando o padrão da rota obedecer exatamente o
+        que está declarado no routerLink
+       -->
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a routerLink="home">Home</a>
+      </li>
       <!-- 
         a diretiva queryParams recebe um objeto de chave-valor 
         representando os parâmetros a serem passados 
