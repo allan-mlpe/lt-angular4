@@ -698,3 +698,9 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Também devemos declarar o Resolver criado nos providers do módulo em questão.
 
 - Recuperando dados vindo do resolver: this.objActivatedRoute.data.subscribe( (info) => info['nomeDoDado'] ) -> ver arquivo [aluno-detalhe.component.ts](rotas/src/app/alunos/aluno-detalhe/aluno-detalhe.component.ts).
+
+<h4>Aula 69</h4>
+
+- Impedindo que o código (ou bundles) da aplicação sejam baixados quando o usuário não está logado: a interface CanLoad do pacote @angular/router.
+
+- Reaproveitando uma guarda já criada para implementar a interface CanLoad ver [auth-guard.ts](rotas/src/app/guards/auth-guard.ts).
