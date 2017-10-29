@@ -719,5 +719,13 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - A definição do pathMatch acima é OBRIGATÓRIA e pode receber os valores 'full' (para validação da rota inteira, geralmente usada nas rotas de root da aplicação) ou 'prefix' (para fazer verificações em prefixo da rota, geralmente usada em rotas filhas).
 
-- Utilizando a propriedade routerLinkActivateOptions para aplicar a classe CSS de rota ativa apenas quando a rota obedecer exatamente o padrão definido no routerLink (ver [app.component.html](rotas/src/app/app.component.html)). 
+- Utilizando a propriedade routerLinkActivateOptions para aplicar a classe CSS de rota ativa apenas quando a rota obedecer exatamente o padrão definido no routerLink (ver [app.component.html](rotas/src/app/app.component.html)).
+
+<h4>Aula 71</h4>
+
+- Fazendo distinção de rotas do Angular e de endpoints do back-end: utilizando a hash '#' nas rotas do projeto.
+
+- Configuração: NgModule({ imports: [RouterModule.forRoot(appRoutes, { useHash: true })] }).
+
+- Ver: [app.routing.module.ts](rotas/src/app/app.routing.module.ts).
 
