@@ -734,15 +734,27 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 <h4>Aula 72</h4>
 
 - Formulários Template Driven
-- Formulário criado e configurado no próprio HTML.
-- Validações são feitas no template HTML (tamanho mínimo e tamanho máximo do campo, regex, etc).
-- Angular cria/deduz o FormGroup.
-- Valores do formulário são submetidos com o ngSubmit.
-- Precisamos criar uma variável local e passá-la para o ngSubmit.
+  - Formulário criado e configurado no próprio HTML.
+  - Validações são feitas no template HTML (tamanho mínimo e tamanho máximo do campo, regex, etc).
+  - Angular cria/deduz o FormGroup.
+  - Valores do formulário são submetidos com o ngSubmit.
+  - Precisamos criar uma variável local e passá-la para o ngSubmit.
 
 - Formulários Data Driven (Reativos)
-- Formulário criado e configurado no componente (o template terá apenas a estrutura básica do formulário).
-- Consequentemente, as validações são feitas no próprio componente.
-- O Angular cria o FormGroup criado no componente.
-- Não é necessário utilizar o ngSubmit, uma vez que a referência ao formulário já está no componente.
-- Podemos usar o evento de clique para realizar a submissão do formulário, por exemplo.
+  - Formulário criado e configurado no componente (o template terá apenas a estrutura básica do formulário).
+  - Consequentemente, as validações são feitas no próprio componente.
+  - O Angular cria o FormGroup criado no componente.
+  - Não é necessário utilizar o ngSubmit, uma vez que a referência ao formulário já está no componente.
+  - Podemos usar o evento de clique para realizar a submissão do formulário, por exemplo.
+
+<h4>Aula 73</h4>
+
+- Criando um projeto já com o módulo de rotas: ng new nome-do-projeto --routing.
+
+- Instalando o [ngx-bootstrap](https://valor-software.com/ngx-bootstrap): npm install ngx-bootstrap --save.
+
+- Criando os componentes do projeto.
+
+- Configurando as rotas da aplicação.
+
+- Construindo o primeiro formulário Template Driven.
