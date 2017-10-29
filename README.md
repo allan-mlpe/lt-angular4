@@ -729,3 +729,20 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - Ver: [app.routing.module.ts](rotas/src/app/app.routing.module.ts).
 
+<h3>Módulo de Formulários</h3>
+<hr>
+<h4>Aula 72</h4>
+
+- Formulários Template Driven
+- Formulário criado e configurado no próprio HTML.
+- Validações são feitas no template HTML (tamanho mínimo e tamanho máximo do campo, regex, etc).
+- Angular cria/deduz o FormGroup.
+- Valores do formulário são submetidos com o ngSubmit.
+- Precisamos criar uma variável local e passá-la para o ngSubmit.
+
+- Formulários Data Driven (Reativos)
+- Formulário criado e configurado no componente (o template terá apenas a estrutura básica do formulário).
+- Consequentemente, as validações são feitas no próprio componente.
+- O Angular cria o FormGroup criado no componente.
+- Não é necessário utilizar o ngSubmit, uma vez que a referência ao formulário já está no componente.
+- Podemos usar o evento de clique para realizar a submissão do formulário, por exemplo.
