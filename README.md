@@ -794,3 +794,28 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Caso o Angular seja utilizado na versão 2, podemos usar a diretiva pattern, acompanhada de um padrão de expressão regular.
 
 - Ex.: pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?".
+
+<h4>Aula 78</h4>
+
+- Aplicando CSS na validação dos campos.
+
+- Estado dos campos de formulário no Angular:
+  - Controle visitado (campo recebeu foco e depois perdeu): ng-touched (sim), ng-untouched (não).
+  - Mudança de valor: ng-dirty (sim), ng-pristine (não).
+  - Controle válido: ng-valid (sim), ng-invalid (não).
+
+<h4>Aula 79</h4>
+
+- Analisando a propriedade control do objeto NgForm para obter informações acerca dos campos do formulário: dirty, touched, valid, pristine, pendind, invalid, untouched, etc.
+
+- Para que variáveis locais estejam visíveis em todo o escopo do template, devemos atribuí-las ao ngModel: #nomeDaVariavelLocal="ngModel".
+
+- Utilizando classes de validação de formulários do Bootstrap.
+
+<h4>Aula 80</h4>
+
+- Desabilitando o botão de submissão do formulário caso haja campos inválidos.
+
+- Verificando a propriedade 'valid' do objeto NgForm.
+
+- Utilizando o property binding para a atributo disabled do botão: [disabled]="expressao".
