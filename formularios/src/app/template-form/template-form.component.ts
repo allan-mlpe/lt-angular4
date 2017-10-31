@@ -13,8 +13,8 @@ export class TemplateFormComponent implements OnInit {
    * padrões
    */
   usuario: any = {
-    nome: 'Jão',
-    email: 'jaozao@email.com'
+    nome: '',
+    email: ''
   };
 
   constructor() { }
