@@ -3,6 +3,7 @@
     simultaneamente as classes ng-invalid e
     ng-touched (exceto tags form)
 */
-.ng-invalid.ng-touched:not(form) {
+
+/*.ng-invalid.ng-touched:not(form) {
     border: 1px solid red;
-}
+}*/

@@ -3,26 +3,59 @@
   que representa o formulário
   associada à diretiva ngForm
   do próprio Angular.
-
-
  -->
 <form #f="ngForm" (ngSubmit)="onSubmit(f)">
-  <div class="form-group">
-    <label for="nome">Nome</label>
+  <div class="form-group"
+    [class.has-error]="nomeVar.invalid && nomeVar.touched"
+    [class.has-feedback]="nomeVar.invalid && nomeVar.touched">
+
+    <label class="control-label" for="nome">Nome</label>
+    
+    <!-- 
+      com ngModel precisamos usar o atributo
+      'name' para o angular inferir o valor
+      do campo na submissão do formulário
+    -->
     <input type="text" class="form-control" id="nome" placeholder="Nome" required
-      name="nome" [(ngModel)]="usuario.nome"> <!-- com ngModel precisamos usar o atributo
-                                'name' para o angular inferir o valor
-                                do campo na submissão do formulário
-                            -->
+      name="nome" [(ngModel)]="usuario.nome" 
+      aria-describedby="nomeStatus"
+      #nomeVar="ngModel"> <!-- 
+                            para que as variáveis locais estejam visíveis em todo
+                            o escopo do template, devemos atribuí-las ao ngModel
+
+                            Ex.: #nomeVariavel="ngModel"
+                          -->
+
+      <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+      <span id="nomeStatus" class="sr-only">(error)</span>
+  
+      <p *ngIf="nomeVar.invalid && nomeVar.touched" 
+        class="alert alert-danger" role="alert">
+        O campo 'Nome' é obrigatório
+      </p>
   </div>
 
-  <div class="form-group">
-    <label for="email">Email</label>
+  <div class="form-group"
+    [ngClass]="{
+      'has-error': emailVar.invalid && emailVar.touched,
+      'has-feedback': emailVar.invalid && emailVar.touched
+    }">
+    <label class="control-label" for="email">Email</label>
     <input type="email" class="form-control" id="email" placeholder="seu-email@email.com" required
-      name="email" [(ngModel)]="usuario.email" email> <!-- 
-                                                        por último, o uso da diretiva 'email' para
-                                                        validar campos de email a partir do Angular 4
-                                                      -->
+      name="email" [(ngModel)]="usuario.email" #emailVar="ngModel"
+      aria-describedby="emailStatus" 
+      email> <!-- 
+              por último, o uso da diretiva 'email' para
+              validar campos de email a partir do Angular 4
+            -->
+
+      <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+      <span id="emailStatus" class="sr-only">(error)</span>
+
+      <p *ngIf="emailVar.invalid && emailVar.touched" 
+        class="alert alert-danger" role="alert">
+        O campo 'Email' é obrigatório
+      </p>
   </div>
 
   <button type="submit" class="btn btn-primary">Enviar</button>
