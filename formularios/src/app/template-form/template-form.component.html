@@ -10,7 +10,7 @@
   <div class="form-group">
     <label for="nome">Nome</label>
     <input type="text" class="form-control" id="nome" placeholder="Nome"
-      name="nome" ngModel> <!-- com ngModel precisamos usar o atributo 
+      name="nome" [(ngModel)]="usuario.nome"> <!-- com ngModel precisamos usar o atributo
                                 'name' para o angular inferir o valor
                                 do campo na submissão do formulário
                             -->
@@ -19,7 +19,7 @@
   <div class="form-group">
     <label for="email">Email</label>
     <input type="email" class="form-control" id="email" placeholder="seu-email@email.com"
-      name="email" ngModel>
+      name="email" [(ngModel)]="usuario.email">
   </div>
 
   <button type="submit" class="btn btn-primary">Enviar</button>
