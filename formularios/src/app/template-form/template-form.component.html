@@ -19,7 +19,10 @@
   <div class="form-group">
     <label for="email">Email</label>
     <input type="email" class="form-control" id="email" placeholder="seu-email@email.com" required
-      name="email" [(ngModel)]="usuario.email">
+      name="email" [(ngModel)]="usuario.email" email> <!-- 
+                                                        por último, o uso da diretiva 'email' para
+                                                        validar campos de email a partir do Angular 4
+                                                      -->
   </div>
 
   <button type="submit" class="btn btn-primary">Enviar</button>
