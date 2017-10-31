@@ -753,8 +753,44 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - Instalando o [ngx-bootstrap](https://valor-software.com/ngx-bootstrap): npm install ngx-bootstrap --save.
 
+- Instalando o Bootstrap 3 no projeto: npm install bootstrap@3 --save.
+
 - Criando os componentes do projeto.
 
 - Configurando as rotas da aplicação.
 
 - Construindo o primeiro formulário Template Driven.
+
+<h4>Aula 74</h4>
+
+- Atribuindo uma variável local à diretiva ngForm: #variavel='ngForm'.
+
+- Escutando o evento de submissão de formulário: (ngSubmit)="funcaoQueSeraExecutada()".
+
+- Para fazer o Angular inferir os valores do formulário devemos utilizar o atribute name do HTML5.
+
+- Ex.: "input type="text" ... name="nomeParaOCampo" ngModel ...".
+
+<h4>Aula 75</h4>
+
+- Preenchendo os dados no formulário com dados pré-definidos: utilizando two-way data binding.
+
+- Ex.: [(ngModel)]="obj.propriedade".
+
+- Podemos usar o ngModel apenas para fazer o preenchimento inicial, sem modificar os valores do objeto 'original' em caso de edição do formulário. Para isso utilizamos apenas o property binding.
+
+- Ex.: [ngModel]="obj.propriedade" ~> isso vai trazer o campo preenchido, mas em caso de edição pelo usuário, os valores do objeto 'obj' não serão alterados.
+
+<h4>Aula 76</h4>
+
+- Alertas para a importação do módulo FormsModule para aplicações com diversos módulos.
+
+<h4>Aula 77</h4>
+
+- Validação de campos (validadores do HTML5 e do Angular).
+
+- Para validar emails no Angular 4, podemos utilizar simplesmente a diretiva 'email' no input correspondente.
+
+- Caso o Angular seja utilizado na versão 2, podemos usar a diretiva pattern, acompanhada de um padrão de expressão regular.
+
+- Ex.: pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?".
