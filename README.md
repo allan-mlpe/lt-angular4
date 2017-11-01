@@ -785,6 +785,8 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - Alertas para a importação do módulo FormsModule para aplicações com diversos módulos.
 
+- Refatorando a aplicação com a criação do módulo TemplateFormModule.
+
 <h4>Aula 77</h4>
 
 - Validação de campos (validadores do HTML5 e do Angular).
@@ -819,3 +821,11 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Verificando a propriedade 'valid' do objeto NgForm.
 
 - Utilizando o property binding para a atributo disabled do botão: [disabled]="expressao".
+
+<h4>Aula 81</h4>
+
+- Criando um componente para debugar o nosso formulário.
+
+<h4>Aula 82</h4>
+
+- 
