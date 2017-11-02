@@ -828,4 +828,8 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 <h4>Aula 82</h4>
 
-- 
+- Incrementando o formulário Template Driven.
+
+- Usando a classe form-horizontal do Bootstrap.
+
+- Utilizado campos de somente leitura: o atributo readonly do HTML5.
