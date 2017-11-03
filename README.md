@@ -841,3 +841,11 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Criação de métodos para aplicar classes de erro do Bootstrap de campos inválidos.
 
 - Criação de componente para encapsular mensagens de erro/feedback para o usuário.
+
+<h4>Aula 84</h4>
+
+- Agrupando dados em formulários Template Driven: a diretiva ngModelGroup.
+
+- Sintaxe: ngModelGroup="nomeParaObjeto".
+
+- Utilizando o ngModelGroup nós podemos ter objetos aninhados dentro dos valores do formulário conforme a necessidade.
