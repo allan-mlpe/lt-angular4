@@ -27,15 +27,15 @@
 
                             Ex.: #nomeVariavel="ngModel"
                           -->
+      <app-campo-control-error
+        [showError]="checkInvalidAndTouchedField(nomeVar)" 
+        errorMsg="O campo 'Nome' é obrigatório"></app-campo-control-error>
+        <!-- 
+          Quando o valor passado para a propriedade é uma string hard coded, 
+          podemos dispensar o uso dos colchetes para fazer o property binding.
 
-      <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"
-        *ngIf="nomeVar.invalid && nomeVar.touched"></span>
-      <span id="nomeStatus" class="sr-only">(error)</span>
-
-      <p *ngIf="nomeVar.invalid && nomeVar.touched" 
-        class="alert alert-danger" role="alert">
-        O campo 'Nome' é obrigatório
-      </p>
+          Ver exemplo acima na propriedade 'errorMsg'.
+        -->
     </div>
   </div>
 
@@ -55,14 +55,9 @@
               validar campos de email a partir do Angular 4
             -->
 
-      <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"
-        *ngIf="emailVar.invalid && emailVar.touched"></span>
-      <span id="emailStatus" class="sr-only">(error)</span>
-
-      <p *ngIf="emailVar.invalid && emailVar.touched" 
-        class="alert alert-danger" role="alert">
-        O campo 'Email' é obrigatório
-      </p>
+      <app-campo-control-error
+        [showError]="checkInvalidAndTouchedField(emailVar)" 
+        errorMsg="O campo 'Email' é obrigatório"></app-campo-control-error>
     </div>
   </div>
 
@@ -73,14 +68,9 @@
         <input type="text" class="form-control" id="cep"
           name="cep" ngModel #cepVar="ngModel" required>
 
-        <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"
-        *ngIf="cepVar.invalid && cepVar.touched"></span>
-        <span id="cepStatus" class="sr-only">(error)</span>
-
-        <p *ngIf="cepVar.invalid && cepVar.touched" 
-          class="alert alert-danger" role="alert">
-          O campo 'CEP' é obrigatório
-        </p>
+        <app-campo-control-error
+          [showError]="checkInvalidAndTouchedField(cepVar)" 
+          errorMsg="O campo 'CEP' é obrigatório"></app-campo-control-error>
     </div>
 
     <div class="col-md-3"
@@ -89,15 +79,9 @@
         <input type="text" class="form-control" id="numero"
           name="numero" ngModel #numeroVar="ngModel" required>
 
-
-        <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"
-        *ngIf="numeroVar.invalid && numeroVar.touched"></span>
-        <span id="numeroStatus" class="sr-only">(error)</span>
-
-        <p *ngIf="numeroVar.invalid && numeroVar.touched" 
-          class="alert alert-danger" role="alert">
-          O campo 'Número' é obrigatório
-        </p>
+        <app-campo-control-error
+          [showError]="checkInvalidAndTouchedField(numeroVar)" 
+          errorMsg="O campo 'Número' é obrigatório"></app-campo-control-error>
     </div>
 
     <div class="col-md-6">
@@ -123,32 +107,22 @@
       aria-describedby="ruaStatus"
       #ruaVar="ngModel"> 
 
-      <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"
-        *ngIf="ruaVar.invalid && ruaVar.touched"></span>
-      <span id="ruaStatus" class="sr-only">(error)</span>
-
-      <p *ngIf="ruaVar.invalid && ruaVar.touched" 
-        class="alert alert-danger" role="alert">
-        O campo 'Rua' é obrigatório
-      </p>
+      <app-campo-control-error
+        [showError]="checkInvalidAndTouchedField(ruaVar)" 
+        errorMsg="O campo 'Rua' é obrigatório"></app-campo-control-error>
     </div>
   </div>
 
   <div class="form-group">
-      <div class="col-md-5"
-        [ngClass]="addErrorClasses(bairroVar)">
-        <label for="bairro" class="control-label">Bairro</label>
-        <input type="text" class="form-control" id="bairro"
-            name="bairro" ngModel #bairroVar="ngModel" required readonly>
-    
-        <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"
-        *ngIf="bairroVar.invalid && bairroVar.touched"></span>
-        <span id="bairroStatus" class="sr-only">(error)</span>
-    
-        <p *ngIf="bairroVar.invalid && bairroVar.touched" 
-            class="alert alert-danger" role="alert">
-            O campo 'Bairro' é obrigatório
-        </p>
+    <div class="col-md-5"
+      [ngClass]="addErrorClasses(bairroVar)">
+      <label for="bairro" class="control-label">Bairro</label>
+      <input type="text" class="form-control" id="bairro"
+          name="bairro" ngModel #bairroVar="ngModel" required readonly>
+  
+      <app-campo-control-error
+        [showError]="checkInvalidAndTouchedField(bairroVar)" 
+        errorMsg="O campo 'Bairro' é obrigatório"></app-campo-control-error>
     </div>
 
     <div class="col-md-4"
@@ -157,14 +131,9 @@
       <input type="text" class="form-control" id="cidade"
           name="cidade" ngModel #cidadeVar="ngModel" required readonly>
 
-      <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"
-      *ngIf="cidadeVar.invalid && cidadeVar.touched"></span>
-      <span id="cidadeStatus" class="sr-only">(error)</span>
-
-      <p *ngIf="cidadeVar.invalid && cidadeVar.touched" 
-          class="alert alert-danger" role="alert">
-          O campo 'Cidade' é obrigatório
-      </p>
+      <app-campo-control-error
+        [showError]="checkInvalidAndTouchedField(cidadeVar)" 
+        errorMsg="O campo 'Cidade' é obrigatório"></app-campo-control-error>
     </div>
 
     <div class="col-md-3"
@@ -173,14 +142,9 @@
       <input type="text" class="form-control" id="estado"
           name="estado" ngModel #estadoVar="ngModel" required>
 
-      <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"
-      *ngIf="estadoVar.invalid && estadoVar.touched"></span>
-      <span id="estadoStatus" class="sr-only">(error)</span>
-
-      <p *ngIf="estadoVar.invalid && estadoVar.touched" 
-          class="alert alert-danger" role="alert">
-          O campo 'Estado' é obrigatório
-      </p>
+      <app-campo-control-error
+        [showError]="checkInvalidAndTouchedField(estadoVar)" 
+        errorMsg="O campo 'Estado' é obrigatório"></app-campo-control-error>
     </div>
   </div>
 

@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { TemplateFormComponent } from './template-form.component';
+import { CampoControlErrorComponent } from '../campo-control-error/campo-control-error.component';
 
 @NgModule({
     imports: [
@@ -12,7 +13,8 @@ import { TemplateFormComponent } from './template-form.component';
     ],
     declarations: [
         TemplateFormComponent,
-        FormDebugComponent
+        FormDebugComponent,
+        CampoControlErrorComponent
     ],
     providers: []
 })
