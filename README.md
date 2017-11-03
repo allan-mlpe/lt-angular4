@@ -833,3 +833,11 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Usando a classe form-horizontal do Bootstrap.
 
 - Utilizado campos de somente leitura: o atributo readonly do HTML5.
+
+<h4>Aula 83</h4>
+
+- Refatoração do formulário criado até então para facilitar a manutenção.
+
+- Criação de métodos para aplicar classes de erro do Bootstrap de campos inválidos.
+
+- Criação de componente para encapsular mensagens de erro/feedback para o usuário.
