@@ -6,8 +6,7 @@
  -->
 <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="form-horizontal">
   <div class="form-group"
-    [class.has-error]="nomeVar.invalid && nomeVar.touched"
-    [class.has-feedback]="nomeVar.invalid && nomeVar.touched">
+    [ngClass]="addErrorClasses(nomeVar)">
 
     <div class="col-sm-12">
       <label class="control-label" for="nome">Nome</label>
@@ -41,10 +40,7 @@
   </div>
 
   <div class="form-group"
-    [ngClass]="{
-      'has-error': emailVar.invalid && emailVar.touched,
-      'has-feedback': emailVar.invalid && emailVar.touched
-    }">
+    [ngClass]="addErrorClasses(emailVar)">
 
     <div class="col-sm-12">
       <label class="control-label" for="email">Email</label>
@@ -72,10 +68,7 @@
 
   <div class="form-group">
     <div class="col-md-3"
-      [ngClass]="{
-        'has-error': cepVar.invalid && cepVar.touched,
-        'has-feedback': cepVar.invalid && cepVar.touched
-      }">
+      [ngClass]="addErrorClasses(cepVar)">
         <label for="cep" class="control-label">CEP</label>
         <input type="text" class="form-control" id="cep"
           name="cep" ngModel #cepVar="ngModel" required>
@@ -91,10 +84,7 @@
     </div>
 
     <div class="col-md-3"
-      [ngClass]="{
-        'has-error': numeroVar.invalid && numeroVar.touched,
-        'has-feedback': numeroVar.invalid && numeroVar.touched
-      }">
+      [ngClass]="addErrorClasses(numeroVar)">
         <label for="numero" class="control-label">Número</label>
         <input type="text" class="form-control" id="numero"
           name="numero" ngModel #numeroVar="ngModel" required>
@@ -118,8 +108,7 @@
   </div>
 
   <div class="form-group"
-    [class.has-error]="ruaVar.invalid && ruaVar.touched"
-    [class.has-feedback]="ruaVar.invalid && ruaVar.touched">
+    [ngClass]="addErrorClasses(ruaVar)">
 
     <div class="col-sm-12">
       <label class="control-label" for="rua">Rua</label>
@@ -147,10 +136,7 @@
 
   <div class="form-group">
       <div class="col-md-5"
-        [ngClass]="{
-        'has-error': bairroVar.invalid && bairroVar.touched,
-        'has-feedback': bairroVar.invalid && bairroVar.touched
-        }">
+        [ngClass]="addErrorClasses(bairroVar)">
         <label for="bairro" class="control-label">Bairro</label>
         <input type="text" class="form-control" id="bairro"
             name="bairro" ngModel #bairroVar="ngModel" required readonly>
@@ -166,10 +152,7 @@
     </div>
 
     <div class="col-md-4"
-      [ngClass]="{
-      'has-error': cidadeVar.invalid && cidadeVar.touched,
-      'has-feedback': cidadeVar.invalid && cidadeVar.touched
-      }">
+      [ngClass]="addErrorClasses(cidadeVar)">
       <label for="cidade" class="control-label">Cidade</label>
       <input type="text" class="form-control" id="cidade"
           name="cidade" ngModel #cidadeVar="ngModel" required readonly>
@@ -185,10 +168,7 @@
     </div>
 
     <div class="col-md-3"
-      [ngClass]="{
-      'has-error': estadoVar.invalid && estadoVar.touched,
-      'has-feedback': estadoVar.invalid && estadoVar.touched
-      }">
+      [ngClass]="addErrorClasses(estadoVar)">
       <label for="estado" class="control-label">Estado</label>
       <input type="text" class="form-control" id="estado"
           name="estado" ngModel #estadoVar="ngModel" required>
