@@ -849,3 +849,19 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Sintaxe: ngModelGroup="nomeParaObjeto".
 
 - Utilizando o ngModelGroup nós podemos ter objetos aninhados dentro dos valores do formulário conforme a necessidade.
+
+<h4>Aula 85</h4>
+
+- Utilizando um web service para buscar um endereço dado o CEP do usuário.
+
+- Webservice base: [ViaCEP](https://viacep.com.br).
+
+- Injetando um objeto da classe Http do pacote @angular/http.
+
+- OBS: evemos importar o HttpModule no módulo que irá utilizar o objeto Http.
+
+- Importando o operador map: import 'rxjs/add/operator/map'.
+
+- Modelo de requisição: httpObj.get('urlDoServico').map(dados => dados.json().subscribe(dados => ...)).
+
+- Utilizando o template literal da ES2005 para evitar concatenação de strings: `qualquerTexto${variavel}qualquer outra coisa`.
