@@ -72,7 +72,8 @@
         [ngClass]="addErrorClasses(cepVar)">
           <label for="cep" class="control-label">CEP</label>
           <input type="text" class="form-control" id="cep"
-            name="cep" ngModel #cepVar="ngModel" required>
+            name="cep" ngModel #cepVar="ngModel" required
+            (blur)="buscarCEP(cepVar.value)"> <!-- evento blur é disparado quando o campo perde o foco -->
 
           <app-campo-control-error
             [showError]="checkInvalidAndTouchedField(cepVar)" 
