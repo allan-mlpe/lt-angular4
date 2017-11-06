@@ -865,3 +865,15 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Modelo de requisição: httpObj.get('urlDoServico').map(dados => dados.json().subscribe(dados => ...)).
 
 - Utilizando o template literal da ES2005 para evitar concatenação de strings: `qualquerTexto${variavel}qualquer outra coisa`.
+
+<h4>Aula 86</h4>
+
+- Populando os campos do formulário com o setValue do objeto NgForm.
+
+- Quando utilizamos o setValue devemos passar o objeto que representa o formulário inteiro, ou seja, um objeto contendo todos os campos do formulário.
+
+- Populando os campos do formulário com o patchValue do objeto FormGroup.
+
+- Podemos acessar o atributo form (do tipo FormGroup) do objeto NgForm.
+
+- Utilizando o objeto FormGroup podemos popular/resetar apenas campos específicos do formulário, dispensando a necessidade de passar um objeto com todos os campos do formulário.
