@@ -73,7 +73,7 @@
           <label for="cep" class="control-label">CEP</label>
           <input type="text" class="form-control" id="cep"
             name="cep" ngModel #cepVar="ngModel" required
-            (blur)="buscarCEP(cepVar.value)"> <!-- evento blur é disparado quando o campo perde o foco -->
+            (blur)="buscarCEP(cepVar.value, f)"> <!-- evento blur é disparado quando o campo perde o foco -->
 
           <app-campo-control-error
             [showError]="checkInvalidAndTouchedField(cepVar)" 
@@ -110,7 +110,7 @@
           com o atributo readonly o usuário não pode editar o campo
         -->
         <input type="text" class="form-control" id="rua" required readonly
-        name="rua" [(ngModel)]="usuario.rua" 
+        name="rua" ngModel
         aria-describedby="ruaStatus"
         #ruaVar="ngModel"> 
 
@@ -147,7 +147,7 @@
         [ngClass]="addErrorClasses(estadoVar)">
         <label for="estado" class="control-label">Estado</label>
         <input type="text" class="form-control" id="estado"
-            name="estado" ngModel #estadoVar="ngModel" required>
+            name="estado" ngModel #estadoVar="ngModel" readonly>
 
         <app-campo-control-error
           [showError]="checkInvalidAndTouchedField(estadoVar)" 
