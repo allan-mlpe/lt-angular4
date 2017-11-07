@@ -877,3 +877,11 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Podemos acessar o atributo form (do tipo FormGroup) do objeto NgForm.
 
 - Utilizando o objeto FormGroup podemos popular/resetar apenas campos específicos do formulário, dispensando a necessidade de passar um objeto com todos os campos do formulário.
+
+<h4>Aula 87</h4>
+
+- Emulando a submissão de dados para o servidor com o HTTP POST.
+
+- Utilizando o objeto http para fazer uma requisição POST: httpObj.post('urlDoServico', JSON.stringfy(dados)).map(...).subscribe(...).
+
+- Testando as requisições com a plataforma [REST Test Test](https://httpbin.org).
