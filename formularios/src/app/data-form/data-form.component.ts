@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-data-form',
@@ -8,21 +8,32 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class DataFormComponent implements OnInit {
 
+  /**
+   * Formulário
+   */
   formulario: FormGroup;
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     // criação de formulário com FormGroup
+    /*
     this.formulario = new FormGroup({
-      /*
-        aqui seguimos a seguinte sintaxe:
-
-        nomeDoCampo: new FormControl(valorInicialDoCampo)
-      */
+        //aqui seguimos a seguinte sintaxe:
+        //nomeDoCampo: new FormControl(valorInicialDoCampo)
       nome: new FormControl(null),
       email: new FormControl(null)
     });
-  }
+    */
 
+    /* 
+      o código abaixo faz a mesma coisa do 
+      código acima de uma maneira mais enxuta
+    */
+    // criação de formulário utilizando o FormBuilder
+    this.formulario = this.formBuilder.group({
+      nome: [null],
+      email: [null]
+    });
+  }
 }
