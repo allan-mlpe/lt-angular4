@@ -885,3 +885,25 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Utilizando o objeto http para fazer uma requisição POST: httpObj.post('urlDoServico', JSON.stringfy(dados)).map(...).subscribe(...).
 
 - Testando as requisições com a plataforma [REST Test Test](https://httpbin.org).
+
+<h4>Aula 88</h4>
+
+- Introdução aos formulários reativos: criando formulários programaticamente.
+
+- Nos formulários reativos a maior parte do código estará dentro do componente (código TypeScript) e não dentro do template (código HTML).
+
+<h4>Aula 89</h4>
+
+- Configurando módulos e componentes para trabalhar com formulários reativos.
+
+- Utilizando a classe FormGroup do pacote @angular/forms para representar o formulário.
+
+- Para trabalhar com formulários reativos precisamos importar o módulo: ReactiveFormsModule do pacote @angular/forms.
+
+<h4>Aula 90</h4>
+
+- Criando formulários reativos com o FormGroup e com FormBuilder, ambos do pacote @angular/forms.
+
+- Sintaxe com FormGroup: new FormGroup({ nomeDoCampo: new FormControl(valorInicialDoCampo), ... }).
+
+- Sintaxe com FormControl: variavelDoFormBuilder.group({ nomeDoCampo: [valorInicialDoCampo, ...], ... }).
