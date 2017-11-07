@@ -4,7 +4,9 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { DataFormComponent } from './data-form/data-form.component';
+import { DataFormModule } from './data-form/data-form.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { DataFormComponent } from './data-form/data-form.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TemplateFormModule
+    TemplateFormModule,
+    DataFormModule
   ],
   providers: [],
   bootstrap: [AppComponent]
