@@ -907,3 +907,17 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Sintaxe com FormGroup: new FormGroup({ nomeDoCampo: new FormControl(valorInicialDoCampo), ... }).
 
 - Sintaxe com FormControl: variavelDoFormBuilder.group({ nomeDoCampo: [valorInicialDoCampo, ...], ... }).
+
+<h4>Aula 91</h4>
+
+- Sincronizando os dados entre o template e o componente.
+
+- Mapeando o objeto FormGroup do componente para o template: a diretiva formGroup.
+
+- Ex.: [formGroup]="objFormGroup".
+
+- Atualizando os campos no template e no componente: o atributo formControlName.
+
+- Obs: no template devemos trocar os atributos 'name' por 'formControlName'.
+
+- Ex.: formControlName="nomeDoCampoDoFormGroup".
