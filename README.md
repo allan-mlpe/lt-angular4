@@ -884,7 +884,7 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - Utilizando o objeto http para fazer uma requisição POST: httpObj.post('urlDoServico', JSON.stringfy(dados)).map(...).subscribe(...).
 
-- Testando as requisições com a plataforma [REST Test Test](https://httpbin.org).
+- Testando as requisições com a plataforma [REST Test Test](https://resttesttest.com).
 
 <h4>Aula 88</h4>
 
@@ -921,3 +921,7 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Obs: no template devemos trocar os atributos 'name' por 'formControlName'.
 
 - Ex.: formControlName="nomeDoCampoDoFormGroup".
+
+<h4>Aula 92</h4>
+
+- Fazendo a submissão de formulários reativos.
