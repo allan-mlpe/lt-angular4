@@ -41,6 +41,9 @@ export class DataFormComponent implements OnInit {
     });
   }
 
+  /**
+   * Método executado quando formulário é submetido
+   */
   onSubmit() {
     console.log(this.formulario);
     let formData = this.formulario.value;
