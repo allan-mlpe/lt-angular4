@@ -50,6 +50,17 @@ export class DataFormComponent implements OnInit {
 
     this.http.post('https://httpbin.org/post', JSON.stringify(formData))
       .map(res => res)
-      .subscribe(res => console.log(res));
+      .subscribe(res => {
+        console.log(res)
+
+        this.resetForm();
+      });
+  }
+
+  /**
+   * Reseta todos os campos do formulário
+   */
+  resetForm() {
+    this.formulario.reset();
   }
 }
