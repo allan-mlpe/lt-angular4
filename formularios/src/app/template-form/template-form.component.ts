@@ -35,7 +35,11 @@ export class TemplateFormComponent implements OnInit {
 
     this.http.post('https://httpbin.org/post', JSON.stringify(form.value))
       .map(res => res)
-      .subscribe(res => console.log(res));
+      .subscribe(res => {
+        console.log(res);
+
+        this.resetaForm(form);
+      });
   }
 
   /**
@@ -115,5 +119,9 @@ export class TemplateFormComponent implements OnInit {
         estado: dados['uf']
       }
     });
+  }
+
+  resetaForm(formulario: NgForm) {
+    formulario.form.reset();
   }
 }
