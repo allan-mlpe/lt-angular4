@@ -925,3 +925,11 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 <h4>Aula 92</h4>
 
 - Fazendo a submissão de formulários reativos.
+
+- Ex.: httpObj.post('urlDoServico', JSON.stringfy(dados)).map(...).subscribe(...).
+
+<h4>Aula 93</h4>
+
+- Resetando um formulário: objFormGroup.reset().
+
+- Tratando erros na submissão do formulário: httpObj.post('urlDoServico', JSON.stringfy(dados)).map(...).subscribe(..., (error) => { //tratamento do erro }).
