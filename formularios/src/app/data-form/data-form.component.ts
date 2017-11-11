@@ -54,7 +54,13 @@ export class DataFormComponent implements OnInit {
         console.log(res)
 
         this.resetForm();
-      });
+      },
+      //tratamento de erro de requisição
+      (error: any) => {
+        console.log(error);
+        alert(`Erro ao submeter formulário! ${ error.status } - ${ error.statusText }`);
+      }
+    );
   }
 
   /**
