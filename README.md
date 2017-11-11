@@ -933,3 +933,15 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Resetando um formulário: objFormGroup.reset().
 
 - Tratando erros na submissão do formulário: httpObj.post('urlDoServico', JSON.stringfy(dados)).map(...).subscribe(..., (error) => { //tratamento do erro }).
+
+<h4>Aula 94</h4>
+
+- Validando campos de formulário data driven a nível de código.
+
+- Utilizando a classe Validators do pacote @angular/core.
+
+- A classe Validators possui diversos tipos de validação: Validators.required, Validators.minLenght(numeroQualquer), Validators.maxLength(numeroQualquer), Validators.pattern(regex), Validators.email, etc.
+
+- Declaração de um validator: FormBuilder.group( { nomeDoCampo: valorInicial, [Validators.required, Validators.email, ...] } ).
+
+- Podemos verificar em qual validação um dado campo falhou acessando a propriedade errors do objeto FormControl: objFormControl.errors. Outra alternativa seria via o objeto FormGroup: objFormGroup.controls.nomeDoCampo.errors.
