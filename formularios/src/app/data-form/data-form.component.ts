@@ -69,4 +69,23 @@ export class DataFormComponent implements OnInit {
   resetForm() {
     this.formulario.reset();
   }
+
+   /**
+   * Checa se um campo passado como parâmetro é inválido e se já foi tocado
+   * @param campo atributo 'name' atribuído ao campo que será checado
+   */
+  checkInvalidAndTouchedField(campo: string): boolean {
+    return this.formulario.get(campo).invalid && this.formulario.get(campo).touched;
+  }
+
+  /**
+   * Adiciona classes de erro do Bootstrap a campos/labels caso um dado campo esteja inválido
+   * @param campo atributo 'name' do campo que será validado
+   */
+  addErrorClasses(campo: string): object {
+    return {
+      'has-error': this.checkInvalidAndTouchedField(campo),
+      'has-feedback': this.checkInvalidAndTouchedField(campo)
+    };
+  }
 }

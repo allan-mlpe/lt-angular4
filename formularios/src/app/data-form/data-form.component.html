@@ -1,5 +1,9 @@
 <form class="form-horizontal" [formGroup]="formulario" (ngSubmit)="onSubmit()">
-  <div class="form-group">
+  <!-- 
+    utilização do ngClass para a aplicação de classes 
+    CSS para validação do campo em caso de erro(s)
+  -->
+  <div class="form-group" [ngClass]="addErrorClasses('nome')">
 
     <div class="col-sm-12">
       <label class="control-label" for="nome">Nome</label>
@@ -8,10 +12,14 @@
     <div class="col-sm-12">
       <input type="text" class="form-control" id="nome" placeholder="Nome" 
         aria-describedby="nomeStatus" formControlName="nome">
+
+      <app-campo-control-error
+        [showError]="checkInvalidAndTouchedField('nome')" 
+        errorMsg="O campo 'Nome' é obrigatório"></app-campo-control-error>
     </div>
   </div>
 
-  <div class="form-group">
+  <div class="form-group" [ngClass]="addErrorClasses('email')">
     <div class="col-sm-12">
       <label class="control-label" for="email">Email</label>
     </div>
@@ -19,6 +27,17 @@
     <div class="col-sm-12">
       <input type="email" class="form-control" id="email" placeholder="seu-email@email.com"
         email aria-describedby="emailStatus" formControlName="email">
+
+      <app-campo-control-error
+        [showError]="checkInvalidAndTouchedField('email')" 
+        errorMsg="O campo 'Email' é obrigatório"></app-campo-control-error>
+
+      <!-- acesso à variáveis diretamente pelo template -->
+      <app-campo-control-error
+        [showError]="formulario.controls['email'].errors?.email &&
+          formulario.get('email').invalid &&
+          formulario.get('email').touched" 
+          errorMsg="Formato de email inválido"></app-campo-control-error>
     </div>
   </div>
 
