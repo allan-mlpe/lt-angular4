@@ -945,3 +945,9 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Declaração de um validator: FormBuilder.group( { nomeDoCampo: valorInicial, [Validators.required, Validators.email, ...] } ).
 
 - Podemos verificar em qual validação um dado campo falhou acessando a propriedade errors do objeto FormControl: objFormControl.errors. Outra alternativa seria via o objeto FormGroup: objFormGroup.controls.nomeDoCampo.errors.
+
+<h4>Aula 95</h4>
+
+- Aplicando CSS na validação dos campos do formulário.
+
+- Acessando variáveis do componente do formulário data driven diretamente pelo template.
