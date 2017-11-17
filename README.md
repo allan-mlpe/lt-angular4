@@ -955,3 +955,13 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 <h4>Aula 96</h4>
 
 - Migrando um formulário template driven para data driven: incluindo os campos do endereço no formulário data driven.
+
+<h4>Aula 97</h4>
+
+- Aninhando objetos FormGroup.
+
+- Ex.1: new FormGroup( ..., nomeFormGroup: new FormGroup({ campo: new FormControl(null), ... }) }). 
+
+- Ex.2: variavelDoFormBuilder.group(..., nomeFormGroup: variavelDoFormBuilder.group({ nomeDoCampo: [valorInicialDoCampo, ...] }) }).
+
+- Para referenciar FormGroup aninhados no template HTML, devemos usar o atributo formGroupName: formGroupName="nomeDoAtributoAninhado" (e dentro deste elemento inserimos os campos do grupo com o formControlName).
