@@ -951,3 +951,7 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Aplicando CSS na validação dos campos do formulário.
 
 - Acessando variáveis do componente do formulário data driven diretamente pelo template.
+
+<h4>Aula 96</h4>
+
+- Migrando um formulário template driven para data driven: incluindo os campos do endereço no formulário data driven.
