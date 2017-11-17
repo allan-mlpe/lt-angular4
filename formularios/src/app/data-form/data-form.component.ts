@@ -23,10 +23,18 @@ export class DataFormComponent implements OnInit {
     // criação de formulário com FormGroup
     /*
     this.formulario = new FormGroup({
-        //aqui seguimos a seguinte sintaxe:
-        //nomeDoCampo: new FormControl(valorInicialDoCampo)
+      //aqui seguimos a seguinte sintaxe:
+      //nomeDoCampo: new FormControl(valorInicialDoCampo)
       nome: new FormControl(null),
-      email: new FormControl(null)
+      email: new FormControl(null),
+      endereco: new FormGroup({
+        cep: new FormGroup(null),
+        numero: new FormGroup(null),
+        complemento: new FormGroup(null),
+        estado: new FormGroup(null),
+        cidade: new FormGroup(null),
+        bairro: new FormGroup(null),
+      })
     });
     */
 
@@ -38,13 +46,16 @@ export class DataFormComponent implements OnInit {
     this.formulario = this.formBuilder.group({
       nome: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(30)]],
       email: [null, [Validators.required, Validators.email]],
-      cep: [null, Validators.required],
-      numero: [null, Validators.required],
-      complemento: [null],
-      rua: [null, Validators.required],
-      bairro: [null, Validators.required],
-      cidade: [null, Validators.required],
-      estado: [null, Validators.required]
+      //aninhando formgroups
+      endereco: this.formBuilder.group({
+        cep: [null, Validators.required],
+        numero: [null, Validators.required],
+        complemento: [null],
+        rua: [null, Validators.required],
+        bairro: [null, Validators.required],
+        cidade: [null, Validators.required],
+        estado: [null, Validators.required]
+      })
     });
   }
 
