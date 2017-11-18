@@ -50,7 +50,8 @@
         [ngClass]="addErrorClasses('endereco.cep')">
           <label for="cep" class="control-label">CEP</label>
           <input type="text" class="form-control" id="cep"
-            formControlName="cep">
+            formControlName="cep"
+            (blur)="buscarCEP()">
 
           <app-campo-control-error
             [showError]="checkInvalidAndTouchedField('endereco.cep')" 

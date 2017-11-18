@@ -106,4 +106,48 @@ export class DataFormComponent implements OnInit {
       'has-feedback': this.checkInvalidAndTouchedField(campo)
     };
   }
+
+  buscarCEP() {
+    let cep = this.formulario.get('endereco.cep').value;
+
+    //remove caracteres não numéricos do CEP
+    cep = cep.replace(/\D/g, '');
+    
+    //Verifica se campo cep possui valor informado.
+    if (cep != "") {
+
+      //Expressão regular para validar o CEP.
+      const validacep = /^[0-9]{8}$/;
+
+      //Valida o formato do CEP.
+      if(validacep.test(cep)) {
+
+        this.http.get(`//viacep.com.br/ws/${cep}/json`)
+        .map(dados => dados.json())
+        .subscribe(dados => {
+          //console.log(dados);
+          this.populaDadosForm(dados);
+        });
+      }
+    }
+  }
+
+  /**
+   * Popula os campos do formulário com os dados vindos do webservice de CEP
+   * @param dados dados vindos do webservice
+   * @param formulario formulário que será populado com os dados
+   */
+  populaDadosForm(dados: object) {
+    this.formulario.patchValue({
+      endereco: {
+        cep: dados['cep'],
+        numero: "",
+        complemento: dados['complemento'],
+        rua: dados['logradouro'],
+        bairro: dados['bairro'],
+        cidade: dados['localidade'],
+        estado: dados['uf']
+      }
+    });
+  }
 }
