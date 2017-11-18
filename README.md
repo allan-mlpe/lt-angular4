@@ -965,3 +965,11 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Ex.2: variavelDoFormBuilder.group(..., nomeFormGroup: variavelDoFormBuilder.group({ nomeDoCampo: [valorInicialDoCampo, ...] }) }).
 
 - Para referenciar FormGroup aninhados no template HTML, devemos usar o atributo formGroupName: formGroupName="nomeDoAtributoAninhado" (e dentro deste elemento inserimos os campos do grupo com o formControlName).
+
+<h4>Aula 98</h4>
+
+- Consumindo o serviço do CEP no formulário data driven.
+
+- Chamando funções quando da ocorrência de um evento: (blur)="algumaFuncao()".
+
+- Populando os dados do formulário com os dados retornados pelo web service.
