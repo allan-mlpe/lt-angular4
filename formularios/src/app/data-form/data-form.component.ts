@@ -64,19 +64,44 @@ export class DataFormComponent implements OnInit {
    */
   onSubmit() {
     console.log(this.formulario);
-    let formData = this.formulario.value;
 
-    this.http.post('https://httpbin.org/post', JSON.stringify(formData))
-      .map(res => res)
-      .subscribe(res => {
-        console.log(res)
+    if(this.formulario.valid) {
+      let formData = this.formulario.value;
+      
+      this.http.post('https://httpbin.org/post', JSON.stringify(formData))
+        .map(res => res)
+        .subscribe(res => {
+          console.log(res)
+  
+          this.resetForm();
+        },
+        //tratamento de erro de requisição
+        (error: any) => {
+          console.log(error);
+          alert(`Erro ao submeter formulário! ${ error.status } - ${ error.statusText }`);
+        }
+      );
 
-        this.resetForm();
-      },
-      //tratamento de erro de requisição
-      (error: any) => {
-        console.log(error);
-        alert(`Erro ao submeter formulário! ${ error.status } - ${ error.statusText }`);
+    } else {
+      console.log('formulário inválido');
+      this.validaCamposDoForm(this.formulario);
+    }
+  }
+
+  validaCamposDoForm(formGroup: FormGroup) {
+    Object.keys(formGroup.controls).forEach(
+      campo => {
+        console.log(campo);
+        const controle = formGroup.get(campo);
+        controle.markAsDirty();
+
+        /* 
+          se o controle for um formGroup
+          chamamos a função recursivamente
+        */
+        if(controle instanceof FormGroup) {
+          this.validaCamposDoForm(controle);
+        }
       }
     );
   }
@@ -93,7 +118,7 @@ export class DataFormComponent implements OnInit {
    * @param campo atributo 'name' atribuído ao campo que será checado
    */
   checkInvalidAndTouchedField(campo: string): boolean {
-    return this.formulario.get(campo).invalid && this.formulario.get(campo).touched;
+    return this.formulario.get(campo).invalid && (this.formulario.get(campo).touched || this.formulario.get(campo).dirty);
   }
 
   /**
