@@ -973,3 +973,27 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 - Chamando funções quando da ocorrência de um evento: (blur)="algumaFuncao()".
 
 - Populando os dados do formulário com os dados retornados pelo web service.
+
+<h4>Aula 99</h4>
+
+- Validando campos de um formulário na submissão.
+
+- Definindo que um dado campo está "sujo" ou que foi "tocado": objFormControl.markAsDirty() ou objFormControl.markAsTouched().
+
+- Iterando sobre as chaves de um objeto: aprendendo sobre a função Object.keys.
+
+<h4>Aula 100</h4>
+
+- Criando um serviço de para retornar informações dos estados brasileiros.
+
+- Criação de interface para rerpresentar um estado.
+
+- Inclusão de arquivo JSON no diretório assets do projeto. Ao compilar o projeto de produção, tudo que estiver no diretório assets será copiado para o build de produção.
+
+- Retornando conteúdo de arquivo JSON do projeto por meio de um serviço via HTTP GET.
+
+- O objeto Response do pacote @angular/http (importando o Response não precisamos importar o operador map do pacote rxjs).
+
+- Retornando um Observable em um serviço: return this.httpObj.get('urlDoServico').map((dados => dados.json()).
+
+- Obtendo o conteúdo de um Observable em um componente: objObservable().subscribe( //lógica com dados retornados ).
