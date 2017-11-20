@@ -4,6 +4,9 @@ import { Http } from '@angular/http';
 
 import 'rxjs/add/operator/map';
 
+import { DropdownService } from './../shared/services/dropdown.service';
+import { EstadoBr } from './../shared/models/estado-br.model';
+
 @Component({
   selector: 'app-data-form',
   templateUrl: './data-form.component.html',
@@ -16,10 +19,24 @@ export class DataFormComponent implements OnInit {
    */
   formulario: FormGroup;
 
+  estados: Array<EstadoBr>;
+
   constructor(private formBuilder: FormBuilder,
-              private http: Http) { }
+              private http: Http,
+              private dropDownService: DropdownService) { }
+
+
+  setNomeEstado(uf: string): string {
+    let estado = this.estados.find(estado => estado.sigla === uf);
+    return estado.nome;
+  }
 
   ngOnInit() {
+
+    //carrega informações dos estados
+    this.dropDownService.getEstadosBr()
+      .subscribe(dados => { this.estados = dados; console.log(dados); });
+
     // criação de formulário com FormGroup
     /*
     this.formulario = new FormGroup({
@@ -171,7 +188,7 @@ export class DataFormComponent implements OnInit {
         rua: dados['logradouro'],
         bairro: dados['bairro'],
         cidade: dados['localidade'],
-        estado: dados['uf']
+        estado: this.setNomeEstado(dados['uf'])
       }
     });
   }
