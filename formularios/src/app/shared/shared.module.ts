@@ -16,6 +16,8 @@ import { DropdownService } from './services/dropdown.service';
     FormDebugComponent
   ],
   exports: [
+    CommonModule,
+    HttpModule,
     CampoControlErrorComponent,
     FormDebugComponent
   ],
