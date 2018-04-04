@@ -585,7 +585,7 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - Alterando queryParams com o objeto Router.
 
-- objRouter.navigate(['pathParaRota'], { queryParams { chave: valor } }).
+- objRouter.navigate(['pathParaRota'], { queryParams: { chave: valor } }).
 
 <h4>Aula 57</h4>
 
