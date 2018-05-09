@@ -872,7 +872,7 @@ Curso de Angular 2.x/4.x do site http://loiane.training/.
 
 - Quando utilizamos o setValue devemos passar o objeto que representa o formulário inteiro, ou seja, um objeto contendo todos os campos do formulário.
 
-- Populando os campos do formulário com o patchValue do objeto FormGroup.
+- Populando os campos do formulário com o patchValue do objeto FormGroup. Neste caso, é dispensável o uso de um objeto contendo todos os campos do formulários. Podemos passar objetos apenas com os campos que queremos popular/atualizar.
 
 - Podemos acessar o atributo form (do tipo FormGroup) do objeto NgForm.
 
